@@ -1,0 +1,7 @@
+$arabic: true;
+$direction: rtl;
+body{
+    direction: rtl;
+    text-align: right;
+}
+@import 'style'; // This is your normal stylesheet

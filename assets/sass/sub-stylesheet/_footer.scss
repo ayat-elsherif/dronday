@@ -1,0 +1,94 @@
+/* @@@@@@@@@@@@@  Footer Section Start Here  @@@@@@@@@@@@@@ */
+.footer {
+    @extend %rel;
+    background: #e8f4fc;
+    .footer-top {
+        @extend %rel;
+        z-index: 1;
+        padding: 50px 0 32px;
+        @include breakpoint(xl) {
+            padding: 90px 0 10px;
+        }
+        .footer-area {
+            .footer-logo {
+                width:300px;
+                margin: auto;
+                a {
+                    margin-bottom: 25px;
+                }
+            }
+            .scocial-media {
+                a {
+                    font-size: $fs-h6;
+                    border-radius: 100%;
+                    background: $primary-color;
+                    &.facebook, &.twitter,  &.linkedin, &.insta {
+                        color: $white-color;
+                    }
+                   
+                }
+            }
+            .footer-menu {
+                ul {
+                    @extend %flex;
+                    justify-content: center;
+                    li {
+                        a {
+                            color: $primary-color;
+                            padding: 0 15px;
+                            margin: 5px;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            &.joinUs{
+                                border:1px solid $title-color;
+                            }
+                        }
+                       
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        @extend %rel;
+        z-index: 1;
+        padding: 40px 0;
+        border-top: 1px solid $title-color;
+        p {
+            margin-bottom: 0;
+            color: $title-color;
+            a {
+                color: $title-color;
+                padding: 0 2px;
+                @extend %rel;
+                span {
+                    @extend %rel;
+                    z-index: 1;
+                }
+                &::after {
+                    @extend %abs;
+                    width: 100%;
+                    height: 1px;
+                    background: $white-color;
+                    #{$left}: 0;
+                    bottom: 0;
+                    #{$right}: 0;
+                    transform: scaleX(0);
+                    transform-origin: $left;
+                    transition: all .3s ease-in-out;
+                }
+                &:hover {
+                    &::after {
+                        transform: scaleX(1);
+                        transform-origin: $right;
+                    }
+                }
+            }
+        }
+    }
+    &.style-2 {
+        .footer-bottom {
+            border-top: 1px solid #ff834d;
+        }
+    }
+}

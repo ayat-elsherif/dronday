@@ -1,0 +1,7 @@
+$latin: true;
+$direction: ltr;
+body{
+    direction: ltr;
+    text-align: left;
+}
+@import 'style'; // This is your normal stylesheet

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+		<!-- animate scss -->
+		<link rel="stylesheet" href="assets/css/animate.css">
+		<!-- bootstarp css -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<!-- icofont -->
+		<link rel="stylesheet" href="assets/css/icofont.min.css">
+		<!-- lightcase css -->
+		<link rel="stylesheet" href="assets/css/lightcase.css">
+		<!-- swiper css -->
+		<link rel="stylesheet" href="assets/css/swiper.min.css">
+		<!-- custom scss -->
+		<link rel="stylesheet" href="assets/css/style-ltr.css">
+
+		<title>DronDay -  </title>
+	</head>
+
+	<body>
+		<!-- preloader -->
+		<div class="preloader"><div class="load loade"><hr/><hr/><hr/><hr/></div></div>
+		<!-- preloader -->
+
+		
+		<!-- Mobile Menu Start Here -->
+		<div class="mobile-menu">
+			<nav class="mobile-header d-xl-none">
+				<div class="header-logo">
+					<a href="index.html" class="logo"><img src="assets/images/logo/01.png" alt="logo"></a>
+				</div>
+				<div class="header-bar">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+			<nav class="menu">
+				<div class="mobile-menu-area d-xl-none">
+					<div class="mobile-menu-area-inner scrollbar">
+						<div class="mobile-search">
+							<input type="text" placeholder="Search Here.........">
+							<button type="submit"><i class="icofont-search-2"></i></button>
+						</div>
+						<ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="chefs.htm">Gallery</a></li>
+                            <li>
+                                <a href="Contact.htm">Contact</a>   
+							</li>
+
+							<div class="signIn border-bottom">
+								<ul>
+									<li data-toggle="modal" data-target="#signin"> <a> Login</a></li>
+								</ul>
+							</div>
+							<div class="joinUs border-bottom">
+								<ul>
+									<li data-toggle="modal" data-target="#joinUs"> <a> Join Us</a></li>
+								</ul>
+							</div>
+
+							<li class="border-bottom">
+								<div class="city-lang">
+									<img src="assets/images/header/01.png" alt="city-lang">
+									<select name="lang" id="lang" class="city-dialect">
+										<option value="1">ENG</option>
+										<option value="2">AR-EG</option>
+										<option value="3">AR-UAE</option>
+									</select>
+								</div>
+							</li>
+												
+							<!-------------------------logged in ( cart and profile) small screens------------------------->
+							<!-- 
+							<li class="border-bottom">
+								<div class="author-account">
+									<div class="author-icon">
+										<img src="assets/images/chef/author/08.jpg" alt="author">
+									</div>
+									<div class="author-select">
+										<select name="author-select" id="author-select">
+											<option value="1">My Account </option>
+											<option value="2">Log Out </option>
+										</select>
+									</div>
+								</div>
+							</li> -->
+							<!-------------------------logged in ( cart and profile)------------------------->					 
+                        </ul>
+						<div class="scocial-media">
+							<a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+							<a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+							<a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+							<a href="#" class="vimeo"><i class="icofont-vimeo"></i></a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- Mobile Menu Ending Here -->
+
+		<!-- header section start -->
+		<header class="header-section d-xl-block d-none">
+			<div class="container">
+				<div class="header-area">
+					<div class="logo">
+						<a href="index.html"><img src="assets/images/logo/01.png" alt="logo"></a>
+					</div>
+					<div class="main-menu">
+						<ul>
+                            <li>
+                                <a class="active" href="#">Home</a>                       
+                            </li>
+                            <li><a href="about.html">About</a></li>
+                            <li>
+                                <a href="Gallery.html">Gallery</a>                       
+                            </li>			
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+					</div>
+					<div class="author-option">
+						<div class="signing-area">
+							<div class="city-lang">
+								<img src="assets/images/header/01.png" alt="city-lang">
+								<select name="lang" id="lang" class="city-dialect">
+									<option value="1">ENG</option>
+									<option value="2">AR-EG</option>
+									<option value="3">AR_UAE</option>
+								</select>
+							</div>
+							<div class="signIn">
+								<ul>
+									<li data-toggle="modal" data-target="#signin"> <a>  Login <i class="icofont-ui-user"></i></a></li>
+								</ul>
+							</div>
+							<div class="joinUs">
+								<ul>
+									<li data-toggle="modal" data-target="#joinUs"><a> Join Us</a></li>
+								</ul>
+							</div>
+						
+							<!-----------------------------------logged in (cart and profile) large-screen------------------------------------->
+							<!-- 
+							
+							<div class="author-account">
+								<div class="author-icon">
+									<img src="assets/images/chef/author/08.jpg" alt="author">
+								</div>
+								<div class="author-select">
+									<select name="author-select" id="author-select">
+										<option value="1">My Account </option>
+										<option value="2">Log Out </option>
+									</select>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header section ending -->
+
+		<!-- Banner Section Start Here -->
+		<section class="banner">
+			<div class="d-video-bg">
+				<video autoplay muted loop id="myVideo">
+					<source src="assets/videos/01.mp4" type="video/mp4">
+					Your browser does not support HTML5 video.
+				  </video>
+			  </div>
+			<div class="banner-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-8 col-12">
+							<div class="banner-content">
+								<p>1 USD / MINUTE</p>
+								<h2>Request a drone Today...</h2>
+								<p>MEET A PROFESSIONAL DRONE PILOTS IN WORLD</p>
+								<form action="/">
+									<div class="codexcoder">
+											<p class="d-find">Find Drone</p>
+									</div>
+									<input type="text" name="type" placeholder="Choose where you want to take a video">
+									<button type="submit"><i class="icofont-search-2"></i></button>
+								</form>
+								<ul>
+									<li><span>700+</span>Drone</li>
+									<li><span>6900+</span>Licensed Pilots</li>
+									<li><span>6900+</span>Daily Videos</li>
+								</ul>
+								<div class="bg-white p-insurance">
+									<i class="icofont-safety"></i> 
+									<span>Pilot’s Insurance Coverage Is Publicly Displayed we Protect You Against Fraud</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Banner Section Ending Here -->
+
+
+		<!-- drone Catagory Section Start here -->
+		<section class="drone-category padding-tb">
+			<div class="container">
+				<div class="drone-box">
+					<div class="section-header">
+						<h3>WHAT WE DO</h3>
+						<p>OUR GOAL TO CHANGE YOUR MEMORIES. WE CAPTURE MEMORIES FROM ABOVE</p>
+					</div>
+					<div class="section-wrapper">
+						<div class="drone-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="drone-item">
+										<div class="drone-thumb">
+											<a href="#"><i class="icofont-plant"></i></a>
+										</div>
+										<div class="drone-content">
+											<a href="#">Agriculture</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="drone-item">
+										<div class="drone-thumb">
+											<a href="#"><i class="icofont-result-sport"></i></a>
+										</div>
+										<div class="drone-content">
+											<a href="#">Sport</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="drone-item">
+										<div class="drone-thumb">
+											<a href="#"><i class="icofont-hill"></i></a>
+										</div>
+										<div class="drone-content">
+											<a href="#">Tourism</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="drone-item">
+										<div class="drone-thumb">
+											<a href="#"><i class="icofont-gift"></i></a>
+										</div>
+										<div class="drone-content">
+											<a href="#">Party</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="drone-item">
+										<div class="drone-thumb">
+											<a href="#"><i class="icofont-jewlery"></i></a>
+										</div>
+										<div class="drone-content">
+											<a href="#">Wedding</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="drone-item">
+										<div class="drone-thumb">
+											<a href="#"><i class="icofont-help-robot"></i></a>
+										</div>
+										<div class="drone-content">
+											<a href="#">Construction</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="drone-item">
+										<div class="drone-thumb">
+											<a href="#"><i class="icofont-ui-video"></i></a>
+										</div>
+										<div class="drone-content">
+											<a href="#">Video, Photo's Editing</a>
+										</div>
+									</div>
+								</div>
+						
+							</div>
+						</div>
+						<div class="drone-slider-next"><i class="icofont-double-left"></i></div>
+						<div class="drone-slider-prev"><i class="icofont-double-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- drone Catagory Section Ending here -->
+
+		<!-- drone Services Section Start here -->
+		<section class="drone-services padding-tb">
+			<div class="container">
+				<div class="section-header">
+					<h3>How it Works</h3>
+					<p>Completely network impactful users whereas next-generation applications engage out thinking via tactical action.</p>
+				</div>
+				<div class="section-wrapper">
+					<div class="service-item">
+						<div class="service-inner">
+							<div class="service-thumb">
+								<div class="service-cont">
+									<img src='assets/images/service/01.png'>
+								</div>
+								<span>01 step</span>
+							</div>
+							<div class="service-content">
+								<h6><a href="#">Choose Where To Shoot</a></h6>
+							</div>
+						</div>
+					</div>
+					<div class="service-item">
+						<div class="service-inner">
+							<div class="service-thumb">
+								<div class="service-cont">
+								<img src='assets/images/service/02.png'>
+								</div>
+								<span>02 step</span>
+							</div>
+							<div class="service-content">
+								<h6><a href="#">Find Drone</a></h6>
+							</div>
+						</div>
+					</div>
+					<div class="service-item">
+						<div class="service-inner">
+							<div class="service-thumb">
+								<div class="service-cont">
+								<img src="assets/images/service/03.png" alt="drone-service">
+								</div>
+								<span>03 step</span>
+							</div>
+							<div class="service-content">
+								<h6><a href="#">Book & Payment</a></h6>
+							</div>
+						</div>
+					</div>
+					<div class="service-item">
+						<div class="service-inner">
+							<div class="service-thumb">
+								<div class="service-cont">
+								<img src="assets/images/service/04.png" alt="drone-service">
+								</div>
+								<span>04 step</span>
+							</div>
+							<div class="service-content">
+								<h6><a href="#">Meet A Pilot</a></h6>
+							</div>
+						</div>
+					</div>
+					<div class="service-item">
+						<div class="service-inner">
+							<div class="service-thumb">
+								<div class="service-cont">
+								<img src="assets/images/service/05.png" alt="drone-service">
+								</div>
+								<span>05 step</span>
+							</div>
+							<div class="service-content">
+								<h6><a href="#">Receive Your Videos</a></h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- drone Services Section Ending here -->
+
+		<!-- Popular drone Section Start Here -->
+		<section class="popular-drones padding-tb">
+			<div class="container">
+				<div class="section-header">
+					<h3>OUR BEAUTIFUL WORLD DRONE VIDEOS</h3>
+					<p>Our award-winning photographers are amongst the most accomplished and celebrated artists in the Middle
+						East. Over the years, they’ve had the opportunity to work with iconic brands around the world
+					</p>
+				</div>
+				<div class="section-wrapper">
+					<div class="row">
+						<div class="col-xl-4 col-md-6 col-12">
+							<div class="p-drone-item">
+								<div class="p-drone-inner">
+									<div class="p-drone-thumb">
+										<img src="assets/images/popular-drone/01.jpg" alt="p-drone">
+										<div class="p-dron-overlay">
+											<span>
+												View Details
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-6 col-12">
+							<div class="p-drone-item">
+								<div class="p-drone-inner">
+									<div class="p-drone-thumb">
+										<img src="assets/images/popular-drone/02.jpg" alt="p-drone">
+										<div class="p-dron-overlay">
+											<span>
+												View Details
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-6 col-12">
+							<div class="p-drone-item">
+								<div class="p-drone-inner">
+									<div class="p-drone-thumb">
+										<img src="assets/images/popular-drone/03.jpg" alt="p-drone">
+										<div class="p-dron-overlay">
+											<span>
+												View Details
+											</span>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-6 col-12">
+							<div class="p-drone-item">
+								<div class="p-drone-inner">
+									<div class="p-drone-thumb">
+										<img src="assets/images/popular-drone/04.jpg" alt="p-drone">
+										<div class="p-dron-overlay">
+											<span>
+												View Details
+											</span>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-6 col-12">
+							<div class="p-drone-item">
+								<div class="p-drone-inner">
+									<div class="p-drone-thumb">
+										<img src="assets/images/popular-drone/05.jpg" alt="p-drone">
+										<div class="p-dron-overlay">
+											<span>
+												View Details
+											</span>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-6 col-12">
+							<div class="p-drone-item">
+								<div class="p-drone-inner">
+									<div class="p-drone-thumb">
+										<img src="assets/images/popular-drone/06.jpg" alt="p-drone">
+										<div class="p-dron-overlay">
+											<span>
+												View Details
+											</span>
+										</div>
+									</div>
+								
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Popular drone Section Ending Here -->
+
+		<!-- drone Apps Section Start here -->
+		<section class="drone-apps">
+			<div class="bg-shape-style"></div>
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-8 offset-lg-2 col-12">
+						<div class="apps-content padding-tb">
+							<div class="section-header">
+								<h4>ARE YOU READY</h4>
+								<h3>TO TAKE THE MOST BEAUTIFUL
+									PHOTOS AND VIDEOS OF YOUR LIFE?</h3>
+								<p>we believe that every moment, big or small, is infinitely precious and deserves to be captured. Our
+									team of professional pilots are handpicked and trained by the world’s
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- drone Apps Section Ending here -->
+
+			<!-- Popular drone Section Start Here -->
+			<section class="popular-drones padding-tb">
+				<div class="container">
+					<div class="section-header">
+						<h3>THE LATEST VIDEOS AND PHOTOS</h3>
+						<p>Owe pride ourselves on meeting and exceeding our clients high expectations. Here you can
+							find a latest drone videos of the many client organizations that we work with
+						</p>
+					</div>
+					<div class="section-wrapper">
+						<div class="row">
+							<div class="col-xl-4 col-md-6 col-12">
+								<div class="p-drone-item">
+									<div class="p-drone-inner">
+										<div class="p-drone-thumb">
+											<img src="assets/images/popular-drone/01.jpg" alt="p-drone">
+											<div class="p-dron-overlay">
+												<span>
+													View Details
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-md-6 col-12">
+								<div class="p-drone-item">
+									<div class="p-drone-inner">
+										<div class="p-drone-thumb">
+											<img src="assets/images/popular-drone/02.jpg" alt="p-drone">
+											<div class="p-dron-overlay">
+												<span>
+													View Details
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-md-6 col-12">
+								<div class="p-drone-item">
+									<div class="p-drone-inner">
+										<div class="p-drone-thumb">
+											<img src="assets/images/popular-drone/03.jpg" alt="p-drone">
+											<div class="p-dron-overlay">
+												<span>
+													View Details
+												</span>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-md-6 col-12">
+								<div class="p-drone-item">
+									<div class="p-drone-inner">
+										<div class="p-drone-thumb">
+											<img src="assets/images/popular-drone/04.jpg" alt="p-drone">
+											<div class="p-dron-overlay">
+												<span>
+													View Details
+												</span>
+											</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-md-6 col-12">
+								<div class="p-drone-item">
+									<div class="p-drone-inner">
+										<div class="p-drone-thumb">
+											<img src="assets/images/popular-drone/05.jpg" alt="p-drone">
+											<div class="p-dron-overlay">
+												<span>
+													View Details
+												</span>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-md-6 col-12">
+								<div class="p-drone-item">
+									<div class="p-drone-inner">
+										<div class="p-drone-thumb">
+											<img src="assets/images/popular-drone/06.jpg" alt="p-drone">
+											<div class="p-dron-overlay">
+												<span>
+													View Details
+												</span>
+											</div>
+										</div>
+									
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Popular drone Section Ending Here -->
+	
+
+		<!-- Contact From Section Start Here -->
+		<section class="contact-us">
+			<div class="bg-shape-style"></div>
+			<div class="container">
+				<div class="row justify-content-center align-items-center">
+			
+					<div class="col-lg-9 col-12">
+						<div class="contact-home-chef">
+							<div class="section-header">
+								<h3>Join now <span> the world's largest network of drone </span> and earn money</h3>
+								<button class="drone-btn"> <span>JOIN US</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Contact From Section Ending Here -->
+
+
+		
+		<!-- Popular Home Chef Section Start Here -->
+		<section class="popular-chef padding-tb" style="background-color: #fafeff;">
+			<div class="container">
+				<div class="section-header">
+					<h3>Popular DRONE PILOTS</h3>
+					<p>These are the best Dorn photographers this month,
+						they were chosen based on customer rates and dronday statistics</p>
+				</div>
+				<div class="section-wrapper">
+					<div class="row justify-content-center">
+						<div class="col-xl-4 col-md-6 col-12">
+							<div class="chef-item">
+								<div class="chef-inner">
+									<div class="chef-thumb">
+										<img src="assets/images/chef/01.jpg" alt="food-chef">
+									</div>
+									<div class="chef-content">
+										<div class="chef-author">
+											<a href="#">
+												<img src="assets/images/chef/author/07.jpg" alt="chef-author">
+											</a>
+										</div>
+										<div class="chef-brief">
+											<h5><a href="#">Sanzida laila Trisha</a></h5>							
+											<div class="p-food-footer">
+												<div class="right text-left">
+													<div class="rating">
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														
+													</div>
+													<h6 class="mb-0">(147 ratings)</h6>
+												</div>
+												<div class="right text-left mb-4"><i class="icofont-home"></i> Ajman, ALRawda</div>
+											</div>
+										</div>
+										<div class="chef-footer">
+											<div class="chef-earn chef-con">
+												<h6>357$</h6>
+												<a href="#">Earn</a>
+											</div>
+											<div class="chef-menu chef-con">
+												<h6>96</h6>
+												<a href="#">Request</a>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-6 col-12">
+							<div class="chef-item">
+								<div class="chef-inner">
+									<div class="chef-thumb">
+										<img src="assets/images/chef/02.jpg" alt="food-chef">
+									</div>
+									<div class="chef-content">
+										<div class="chef-author">
+											<a href="#">
+												<img src="assets/images/chef/author/08.jpg" alt="chef-author">
+											</a>
+										</div>
+										<div class="chef-brief">
+											<h5><a href="#">Sanzida laila Trisha</a></h5>							
+											<div class="p-food-footer">
+												<div class="right text-left">
+													<div class="rating">
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														
+													</div>
+													<h6 class="mb-0">(147 ratings)</h6>
+												</div>
+												<div class="right text-left mb-4"><i class="icofont-home"></i> Ajman, ALRawda</div>
+											</div>
+										</div>
+										<div class="chef-footer">
+											<div class="chef-earn chef-con">
+												<h6>357$</h6>
+												<a href="#">Earn</a>
+											</div>
+											<div class="chef-menu chef-con">
+												<h6>96</h6>
+												<a href="#">Request</a>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-6 col-12">
+							<div class="chef-item">
+								<div class="chef-inner">
+									<div class="chef-thumb">
+										<img src="assets/images/chef/03.jpg" alt="food-chef">
+									</div>
+									<div class="chef-content">
+										<div class="chef-author">
+											<a href="#">
+												<img src="assets/images/chef/author/09.jpg" alt="chef-author">
+											</a>
+										</div>
+										<div class="chef-brief">
+											<h5><a href="#">Sanzida laila Trisha</a></h5>							
+											<div class="p-food-footer">
+												<div class="right text-left">
+													<div class="rating">
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														
+													</div>
+													<h6 class="mb-0">(147 ratings)</h6>
+												</div>
+												<div class="right text-left mb-4"><i class="icofont-home"></i> Ajman, ALRawda</div>
+											</div>
+										</div>
+										<div class="chef-footer">
+											<div class="chef-earn chef-con">
+												<h6>357$</h6>
+												<a href="#">Earn</a>
+											</div>
+											<div class="chef-menu chef-con">
+												<h6>96</h6>
+												<a href="#">Request</a>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Popular Home Chef Section Ending Here -->
+
+		<!-- Footer Section Start Here -->
+		<footer class="footer">
+			<div class="bg-shape-style"></div>
+			<div class="container">
+				<div class="footer-top">
+					<div class="footer-area text-center">
+						<div class="footer-logo">
+							<a href="index.html"><img src="assets/images/logo/01.png" alt="footer-logo"></a>
+						</div>
+						<div class="scocial-media">
+							<a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+							<a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+							<a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+							<a href="#" class="vimeo"><i class="icofont-vimeo"></i></a>
+						</div>
+						<div class="footer-menu">
+							<ul>
+								<li><a href="#">HOME</a></li>
+								<li><a href="#">ABOUT</a></li>
+								<li><a href="#">GALLERY</a></li>
+								<li><a href="#">FINE DRONE</a></li>
+								<li><a href="#">CONTACT</a></li>
+								<li><a href="#" class="joinUs">JOIN US</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom text-center">
+					<p>&copy; 2020 <a href="#"><span>Dronday</span></a> Designed by <a href="https://www.egnol.com" target="_blank"><span>Egnol</span></a>.</p>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer Section Ending Here -->
+
+		<!-- scrollToTop start here -->
+		<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i>
+		<span><img src='assets/images/about/home-4/icon/icon-tab-1.svg'></span>
+		</a>
+		<!-- scrollToTop ending here -->
+
+
+		
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/waypoints.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/isotope.pkgd.min.js"></script>
+		<script src="assets/js/wow.min.js"></script>
+		<script src="assets/js/swiper.min.js"></script>
+		<script src="assets/js/lightcase.js"></script>
+		<script src="assets/js/jquery.counterup.min.js"></script>
+		<script src="assets/js/functions.js"></script>
+	</body>
+</html>
