@@ -1,7 +1,7 @@
 /* @@@@@@@@@@@@@  drone Category Section Start Here  @@@@@@@@@@@@@@ */
 .drone-category {
     &.padding-tb {
-        background-color: $secondary-color;
+        background-color: #f3f9ff;
         @include breakpoint(xl) {
             padding: 130px 0;
         }
@@ -2456,15 +2456,9 @@
                         box-shadow: 0 0 10px rgba(136, 136, 136, .10);
                         &:hover {
                             transform: translateY(-5px);
-                            a {
-                                img {
-
-                                }
-                            }
+                           
                         }
-                        a {
-                            img {}
-                        }
+                        
                     }
                 }
             }
@@ -2629,12 +2623,7 @@
                 background: $white-color;
                 @include border-radius(4px);
             }
-            .con-name {
-                input {}
-            }
-            .con-email {}
-            .con-phone {}
-            .con-btn {
+                .con-btn {
                 input {
                     cursor: pointer;
                     background: $theme-color;
