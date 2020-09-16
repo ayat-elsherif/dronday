@@ -285,7 +285,7 @@
     });
 
 
-    /**********************Start open photos in chef profile********************** */
+    /**********************Start open photos in pilot profile********************** */
     $('.photo-icon').on('click',function(){
         $(this).next('.photo-file').click();
     });
@@ -300,6 +300,6 @@
         $(this).next('.photo-mat-src').text(fileVal);
     });
 
-    /**********************End open photos in chef profile********************** */
+    /**********************End open photos in pilot profile********************** */
 
 }(jQuery));

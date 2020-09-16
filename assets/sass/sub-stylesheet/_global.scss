@@ -56,20 +56,20 @@
     bottom: -30%;
     #{$right}: 5%;
     z-index: 9;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
     background: $theme-color;
     text-align: center;
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 26px;
     animation: lab_top_up 5s linear infinite;
     span{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
-        right: 15%;
-        bottom: 110%;
+        right: 7.5px;
+        bottom: 52.5px;
         display: block;
         position: relative;
         transition: .3s ease;
@@ -161,7 +161,16 @@
         @include transform(translateX(-4px)translateY(-50%));
     }
 }
-
+.main-body{
+    .container{
+        background-color: rgba(255,255,255,.8);
+        padding:30px 20px 50px;
+        @include breakpoint(sm){
+            padding:50px 50px 70px; 
+            max-width: 1300px;
+        }
+    }
+}
 .padding-tb {
     padding: 70px 0;
     @include breakpoint(xl) {
@@ -196,7 +205,7 @@
 .drone-btn {
     display: inline-block;
     padding: 10px 80px;
-    background: #fff;
+    background: $primary-color;
     border-radius: 2px;
     border: transparent;
     @extend %rel;
@@ -219,7 +228,7 @@
         z-index: 1;
         position: relative;
         font-weight: 600;
-        color: $title-color;
+        color: $white-color;
         text-transform: uppercase;
         font-size: 20px;
     }
@@ -242,7 +251,7 @@
         }
         &:hover {
             span {
-                color: $white-color;
+                color: $white-color !important;
             }
             .icon {
                 &::before {
@@ -255,8 +264,38 @@
     &.style-3 {
         background: $theme-color;
     }
+    &.white-color{
+        background-color: #fff;
+        &:hover{
+            span{
+                color:#eee;
+            }
+        }
+    }
 }
 
+.dark-button{
+    background-color: $primary-color;
+    color:#fff !important;
+     padding:5px 25px;
+    font-weight: 600;
+    font-size: 18px;
+    border: 1px solid $primary-color;
+    @include breakpoint(md){
+          padding:10px 60px;
+    }
+    &:hover{
+        background-color: $primary-color+dd;
+    }
+&.secondary-button{
+    background-color: #fff;
+    color:$primary-color !important;
+    &:hover{
+        background-color: $primary-color+dd;
+        color:#fff !important;
+    }
+}
+}
 .text-btn {
     color: $theme-color;
     &:hover {
@@ -338,15 +377,9 @@
     }
 }
 
-.contact-from, .signUp-form , .signIn-form{
+.contact-from{
     background: $white-color;
-    // margin-top: 60px;
-    // @include breakpoint(md) {
-    //     margin-top: 100px;
-    // }
-    // @include breakpoint(lg) {
-    //     margin-top: 0;
-    // }
+  
     form {
         padding: 20px 25px;
         input,textarea {
@@ -369,6 +402,7 @@
         }
     }
 }
+
 
 // select style
 
@@ -448,7 +482,7 @@
 .single {
     @extend %hidden;
     .section-wrapper {
-        .chef-item {
+        .pilot-item {
             box-shadow: 0 0 10px rgba(136, 136, 136, .10);
             @extend %rel;
             &::after {
@@ -457,19 +491,19 @@
                 height: 355px;
                 bottom: 0;
                 #{$left}: 0;
-                background: url(../../assets/images/chef/single/shape.png);
+                background: url(../../assets/images/pilot/single/shape.png);
                 background-repeat: no-repeat;
                 background-size: cover;
                 @include breakpoint(max-md) {
                     display: none;
                 }
             }
-            .chef-inner {
-                .chef-thumb {
+            .pilot-inner {
+                .pilot-thumb {
                     height: 180px;
                     @extend %hidden;
                 }
-                .chef-content {
+                .pilot-content {
                     @extend %flex;
                     text-align: $left;
                     justify-content: space-between;
@@ -485,7 +519,7 @@
                         padding-top: 30px;
                         margin-top: 0px;
                     }
-                    .chef-author {
+                    .pilot-author {
                         @include breakpoint(sm) {
                             transform: translateX(0px) translateY(-30px);
                             position: static;
@@ -517,7 +551,7 @@
                             font-size: 17px;                            
                         }
                     }
-                    .chef-photo{
+                    .pilot-photo{
                         position: relative;
                         font-size: 25px;
                         width: 40px;
@@ -538,12 +572,12 @@
                             top: 55px;
                         }
                     }
-                    .chef-desc {
+                    .pilot-desc {
                         width: 100%;
                         @include breakpoint(md) {
                             width: calc(100% - 250px);
                         }
-                        .chef-desc-top {
+                        .pilot-desc-top {
                             @extend %flex;
                             justify-content: space-between;
                             align-items: center;
@@ -602,7 +636,7 @@
                                 }
                             }
                         }
-                        .chef-desc-middle {
+                        .pilot-desc-middle {
                             margin-bottom: 20px;
                             p {
                                 padding-#{$right}: 10px;
@@ -622,9 +656,9 @@
                                 }
                             }
                         }
-                        .chef-footer {
+                        .pilot-footer {
                             text-align: center;
-                            .chef-con {
+                            .pilot-con {
                                 border-#{$right}: 1px solid $border-color;
                                 width: calc(100% / 2);
                                 &:last-child {
@@ -633,17 +667,17 @@
                                 @include breakpoint(sm) {
                                     width: calc(100% / 4);
                                 }
-                                &.chef-earn {
+                                &.pilot-earn {
                                     @include breakpoint(sm) {
                                         border-#{$left}: none;
                                     }
                                 }
-                                &.chef-followers {
+                                &.pilot-followers {
                                     @include breakpoint(max-sm) {
                                         border: 1px solid $border-color;
                                     }
                                 }
-                                &.chef-following {
+                                &.pilot-following {
                                     @include breakpoint(max-sm) {
                                         border: 1px solid $border-color;
                                         border-#{$left}: none;
@@ -666,15 +700,16 @@
                     border-bottom: 1px solid $border-color;
                 }
                 .tablinks {
-                    padding: 10px 8px;
+                    // padding: 10px 8px;
                     background: $border-color;
                     margin: 5px;
-                    border: 1px solid $border-color;
+                    // border: 1px solid $border-color;
                     cursor: pointer;
                     @extend %rel;
                     @include breakpoint(md) {
                         margin: 0 5px;
-                        padding: 10px 20px;
+                        // padding: 10px 20px;
+                        padding:0;
                     }
                     &:first-child {
                         @include breakpoint(sm) {
@@ -732,7 +767,7 @@
                 }
             }
         }
-        .popular-chef-widget {
+        .popular-pilot-widget {
             .section-header {
                 margin-bottom: 10px;
                 padding: 22px 0;
@@ -1256,13 +1291,13 @@
     }
 }
 
-// chef item
-.chef-item {
+// pilot item
+.pilot-item {
     margin-bottom: 30px;
     @include breakpoint(xl) {
         margin-bottom: 0;
     }
-    .chef-inner {
+    .pilot-inner {
         background: $white-color;
         box-shadow: 0 0 10px rgba(136, 136, 136, .10);
         @extend %hidden;
@@ -1270,7 +1305,7 @@
         @include transition($transition);
         &:hover {
             box-shadow: 0 10px 10px rgba(161, 161, 161, .10);
-            .chef-content {
+            .pilot-content {
                 h5 {
                     a {
                         color: $theme-color;
@@ -1278,16 +1313,16 @@
                 }
             }
         }
-        .chef-thumb {
+        .pilot-thumb {
             img {
                 width: 100%;
             }
         }
-        .chef-content {
+        .pilot-content {
             text-align: center;
             padding: 120px 20px 0;
             @extend %rel;
-            .chef-author {
+            .pilot-author {
                 width: 200px;
                 height: 200px;
                 line-height: 200px;
@@ -1320,19 +1355,19 @@
                 margin-bottom: 15px;
                 font-size: 15px;
             }
-            .chef-brief{
+            .pilot-brief{
                 width:60%;
                 margin:auto;
                 h6{
                     font-size: $fs-sm;
                 }
             }
-            .chef-footer {
+            .pilot-footer {
                 @extend %flex;
                 justify-content: space-around;
                 padding-bottom: 5px;
                 border-top: 1px solid $border-color;
-                .chef-con {
+                .pilot-con {
                     width: calc(100% / 2);
                     padding-top: 15px;
                     h6 {
@@ -1346,7 +1381,7 @@
                         }
                     }
                 }
-                .chef-earn {
+                .pilot-earn {
                     border-#{$right}: 1px solid $border-color;
                 }
             }
@@ -1724,6 +1759,42 @@
         }
     }
 }
+//################### upload file Button #################//
+.photo-groups{
+                       
+    .upload-photo{
+        display: inline-block;
+        width: 46%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: auto 1%;
+        
+        @include breakpoint(md) {
+            width:180px;
+            text-align: start;
+            border-radius: 5px;
+        }
+        .photo-mat-icon{
+            font-size: 16px;
+            background: $primary-color;
+            height: 40px;
+            border-radius: 1px;
+            text-align: center;
+            line-height: 40px;
+            color:#fff;
+            margin-bottom: 5px;
+            i{
+                font-size: 18px;
+            }
+        }
+        .photo-mat-src{
+            display: inline-block;
+        }
+    }  
+}
+
+
 
 .bg-table {
     background: url(../../assets/images/book-table/bg-table.png);

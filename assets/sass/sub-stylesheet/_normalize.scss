@@ -34,7 +34,7 @@ Table of CONTENT
   * Style-1
   * Style-2
 09. drone Apps
-10. Popular Chef
+10. Popular pilot
   * Style-1
   * Style-2
 11. Contact Us
@@ -81,8 +81,8 @@ body {
 	font-family: $poppins;
 	font-size: $fs-base;
 	line-height: 1.5;
-	background: $white-color;
-	padding-top: 98px;
+	background: $section-color;
+	padding-top: 45px;
 	@include breakpoint(xl) {
 		padding-top: 0;
 	}

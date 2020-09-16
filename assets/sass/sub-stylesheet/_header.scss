@@ -126,7 +126,7 @@
             align-items: center;
             justify-content: flex-start;
             select{
-                background-color: #fff;
+                background-color: transparent;
             }
             .joinUs,.signIn{
                 width: 90px;
@@ -741,16 +741,16 @@
         // }
         .page-title {
             h3 {
-                color: $white-color;
+                color: $theme-color;
             }
             .breadcrumb {
                 li {
-                    color: $theme-color;
+                    color: $title-color;
                     &::after {
-                        background: $white-color;
+                        background: $desc-color;
                     }
                     a {
-                        color: $white-color;
+                        color: $desc-color;
                         &:hover {
                             color: $theme-color;
                         }

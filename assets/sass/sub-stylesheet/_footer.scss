@@ -11,8 +11,11 @@
         }
         .footer-area {
             .footer-logo {
-                width:300px;
+                width:200px;
                 margin: auto;
+                @include breakpoint(sm){
+                    width: 300px;
+                }
                 a {
                     margin-bottom: 25px;
                 }

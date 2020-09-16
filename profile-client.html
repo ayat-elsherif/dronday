@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+	<!-- animate scss -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- bootstarp css -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- icofont -->
+	<link rel="stylesheet" href="assets/css/icofont.min.css">
+	<!-- lightcase css -->
+	<link rel="stylesheet" href="assets/css/lightcase.css">
+	<!-- swiper css -->
+	<link rel="stylesheet" href="assets/css/swiper.min.css">
+	<!-- custom scss -->
+	<link rel="stylesheet" href="assets/css/style-ltr.css">
+
+	<title>DronDay - </title>
+</head>
+
+<body>
+	<!-- preloader -->
+	<!-- <div class="preloader"><div class="load loade"><hr/><hr/><hr/><hr/></div></div> -->
+	<!-- preloader -->
+
+
+	<!-- Mobile Menu Start Here -->
+	<div class="mobile-menu">
+		<nav class="mobile-header d-xl-none">
+			<div class="header-logo">
+				<a href="index.html" class="logo"><img src="assets/images/logo/01.png" alt="logo"></a>
+			</div>
+			<div class="header-bar">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</nav>
+		<nav class="menu">
+			<div class="mobile-menu-area d-xl-none">
+				<div class="mobile-menu-area-inner scrollbar">
+					<div class="mobile-search">
+						<input type="text" placeholder="Search Here.........">
+						<button type="submit"><i class="icofont-search-2"></i></button>
+					</div>
+					<ul>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="pilots.htm">Gallery</a></li>
+						<li>
+							<a href="Contact.htm">Contact</a>
+						</li>
+
+						<div class="signIn border-bottom">
+							<ul>
+								<li data-toggle="modal" data-target="#signin"> <a> Login</a></li>
+							</ul>
+						</div>
+						<div class="joinUs border-bottom">
+							<ul>
+								<li data-toggle="modal" data-target="#joinUs"> <a> Join Us</a></li>
+							</ul>
+						</div>
+
+						<li class="border-bottom">
+							<div class="city-lang">
+								<img src="assets/images/header/01.png" alt="city-lang">
+								<select name="lang" id="lang" class="city-dialect">
+									<option value="1">ENG</option>
+									<option value="2">AR-EG</option>
+									<option value="3">AR-UAE</option>
+								</select>
+							</div>
+						</li>
+
+						<!-------------------------logged in ( cart and profile) small screens------------------------->
+						<!-- 
+							<li class="border-bottom">
+								<div class="author-account">
+									<div class="author-icon">
+										<img src="assets/images/pilot/author/08.jpg" alt="author">
+									</div>
+									<div class="author-select">
+										<select name="author-select" id="author-select">
+											<option value="1">My Account </option>
+											<option value="2">Log Out </option>
+										</select>
+									</div>
+								</div>
+							</li> -->
+						<!-------------------------logged in ( cart and profile)------------------------->
+					</ul>
+					<div class="scocial-media">
+						<a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+						<a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+						<a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+						<a href="#" class="vimeo"><i class="icofont-vimeo"></i></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- Mobile Menu Ending Here -->
+
+	<!-- header section start -->
+	<header class="header-section d-xl-block d-none">
+		<div class="container">
+			<div class="header-area">
+				<div class="logo">
+					<a href="index.html"><img src="assets/images/logo/01.png" alt="logo"></a>
+				</div>
+				<div class="main-menu">
+					<ul>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+						<li><a href="about.html">About</a></li>
+						<li>
+							<a href="Gallery.html">Gallery</a>
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="author-option">
+					<div class="signing-area">
+						<div class="city-lang">
+							<img src="assets/images/header/01.png" alt="city-lang">
+							<select name="lang" id="lang" class="city-dialect">
+								<option value="1">ENG</option>
+								<option value="2">AR-EG</option>
+								<option value="3">AR_UAE</option>
+							</select>
+						</div>
+						<div class="signIn">
+							<ul>
+								<li data-toggle="modal" data-target="#signin"> <a> Login <i
+											class="icofont-ui-user"></i></a></li>
+							</ul>
+						</div>
+						<div class="joinUs">
+							<ul>
+								<li data-toggle="modal" data-target="#joinUs"><a> Join Us</a></li>
+							</ul>
+						</div>
+
+						<!-----------------------------------logged in (cart and profile) large-screen------------------------------------->
+						<!-- 
+							
+							<div class="author-account">
+								<div class="author-icon">
+									<img src="assets/images/pilot/author/08.jpg" alt="author">
+								</div>
+								<div class="author-select">
+									<select name="author-select" id="author-select">
+										<option value="1">My Account </option>
+										<option value="2">Log Out </option>
+									</select>
+								</div>
+							</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header section ending -->
+
+	<!-- Page Header Section Start Here -->
+	<section class="page-header style-2">
+		<div class="container">
+			<div class="page-title text-center">
+				<h3>Find Drone</h3>
+				<ul class="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li>My Profile</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- Page Header Section Ending Here -->
+
+
+	<!--------- Client profile--------->
+	<div class="main-body">
+		<div class="review single padding-tb">
+			<div class="container">
+				<div class="section-wrapper">
+					<div class="related">
+						<ul class="tab-bar nav nav-tabs" id="myTab" role="tablist">
+							<li class="tablinks nav-item" id="defaultOpen" onclick="openCity(event, 'one')">
+								<a class="nav-link active" id="home-tab" data-toggle="tab" href="#one" role="tab"
+									aria-controls="home" aria-selected="true">
+									My Profile
+								</a>
+							</li>
+							<li class="tablinks nav-item" onclick="openCity(event, 'two')">
+								<a class="nav-link" id="home-tab" data-toggle="tab" href="#two" role="tab"
+									aria-controls="home" aria-selected="true">
+									My Requests (5)
+								</a>
+							</li>
+							<li class="tablinks nav-item" onclick="openCity(event, 'three')">
+
+								<a class="nav-link" id="home-tab" data-toggle="tab" href="#three" role="tab"
+									aria-controls="home" aria-selected="true">
+									Download (2)
+								</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div id="one" class="tabcontent tab-pane fade show active">
+								<div class="spe-shop">
+									<div class="tec-spe">
+										<ul>
+											<li>
+												<div class="left">Name</div>
+												<div class="right pilotName"><span class="">Om Hassan</span> <i
+														class="icofont-ui-edit"></i>
+												</div>
+											</li>
+											<li>
+												<div class="left">Email</div>
+												<div class="right pilotEmail">A@yahoo.com <i
+														class="icofont-ui-edit"></i>
+												</div>
+
+											</li>
+
+											<li>
+												<div class="left">Phone</div>
+												<div class="right pilotPhone">0552060703 <i class="icofont-ui-edit"></i>
+												</div>
+
+											</li>
+											<li>
+												<div class="left">Password</div>
+												<div class="right pilotPass"><span>*********</span><i
+														class="icofont-ui-edit"></i>
+													<output hidden></output>
+													<!---- password real value returns here----->
+												</div>
+
+											</li>
+
+										</ul>
+										<a class="drone-btn style-2 mt-5"><span>Save</span></a>
+									</div>
+								</div>
+							</div>
+
+							<div id="two" class="tabcontent tab-pane fade">
+								<div class="pilot-orders">
+									<div class="order-item">
+										<div class="row justify-content-between">
+											<div class="col-lg-6 col-12">
+												<dl>
+													<dt>Location</dt>
+													<dd>Cairo Tower, Cairo,Egypt</dd>
+													<dt>Date</dt>
+													<dd>02 Dec 2018</dd>
+													<dt>Time</dt>
+													<dd> 18:00 (06:00 pm)</dd>
+													<dt>Price</dt>
+													<dd>60 USD (60 mins)</dd>
+													<dt>Payment</dt>
+													<dd>(not completed)</dd>
+												</dl>
+												<div class="button-groups">
+													<a class="drone-btn style-2"> Cancel</a>
+													<a class="drone-btn style-2"> Confirm & Payment</a>
+												</div>
+											</div>
+											<div class="col-lg-6 col-12 order-photo">
+												<img src="assets/images/pilot/author/07.jpg" />
+												<p class="text-center"><small><i class="icofont-exchange"></i> Change
+														this pilot</small></p>
+											</div>
+
+										</div>
+
+									</div>
+									<div class="order-item">
+										<div class="row justify-content-between">
+											<div class="col-lg-6 col-12">
+												<dl>
+													<dt>Location</dt>
+													<dd>Cairo Tower, Cairo,Egypt</dd>
+													<dt>Date</dt>
+													<dd>02 Dec 2018</dd>
+													<dt>Time</dt>
+													<dd> 18:00 (06:00 pm)</dd>
+													<dt>Price</dt>
+													<dd>60 USD (60 mins)</dd>
+													<dt>Payment</dt>
+													<dd>(not completed)</dd>
+												</dl>
+												<div class="button-groups">
+													<a class="drone-btn style-2"> Cancel</a>
+													<button class="drone-btn style-2" disabled> Confirm &
+														Payment</button>
+												</div>
+											</div>
+
+											<div class='col-lg-6 col-12 client-alert'>
+												<h6 class="text-center">
+													Your Request Not Yet Accepted By Pilots</h6>
+												<p class="text-center"><small>You Will See Here Profile Of Pilot Who Is
+														Accept Your Request</small></p>
+											</div>
+
+
+										</div>
+
+									</div>
+									<div class="order-item">
+										<div class="row justify-content-between">
+											<div class="col-lg-6 col-12">
+												<dl>
+													<dt>Location</dt>
+													<dd>Cairo Tower, Cairo,Egypt</dd>
+													<dt>Date</dt>
+													<dd>02 Dec 2018</dd>
+													<dt>Time</dt>
+													<dd> 18:00 (06:00 pm)</dd>
+													<dt>Price</dt>
+													<dd>60 USD (60 mins)</dd>
+													<dt>Payment</dt>
+													<dd>(not completed)</dd>
+												</dl>
+												<div class="button-groups">
+													<a class="drone-btn style-2"> Cancel</a>
+													<button class="drone-btn style-2" disabled> Confirm &
+														Payment</button>
+												</div>
+											</div>
+
+											<div class='col-lg-6 col-12 client-alert'>
+												<h6 class="text-center">
+													Your Request declined By Pilots</h6>
+												<p class="text-center"><small>The location you choosed no-fly
+														zone</small></p>
+											</div>
+
+
+										</div>
+
+									</div>
+									<div class="order-item">
+										<div class="row justify-content-between">
+											<div class="col-lg-6 col-12">
+												<dl>
+													<dt>Location</dt>
+													<dd>Cairo Tower, Cairo,Egypt</dd>
+													<dt>Date</dt>
+													<dd>02 Dec 2018</dd>
+													<dt>Time</dt>
+													<dd> 18:00 (06:00 pm)</dd>
+													<dt>Price</dt>
+													<dd>60 USD (60 mins)</dd>
+													<dt>Payment</dt>
+													<dd>(not completed)</dd>
+												</dl>
+												<div class="button-groups">
+													<a class="drone-btn style-2"> Cancel</a>
+													<button class="drone-btn style-2" disabled> Confirm &
+														Payment</button>
+												</div>
+											</div>
+
+											<div class='col-lg-6 col-12 client-alert'>
+												<h6 class="text-center">
+													Your Request declined By Pilots</h6>
+												<p class="text-center"><small>Try to increase your drone cost</small>
+												</p>
+											</div>
+
+
+										</div>
+
+									</div>
+									<div class="order-item">
+										<div class="row justify-content-between">
+											<div class="col-lg-6 col-12">
+												<dl>
+													<dt>Location</dt>
+													<dd>Cairo Tower, Cairo,Egypt</dd>
+													<dt>Date</dt>
+													<dd>02 Dec 2018</dd>
+													<dt>Time</dt>
+													<dd> 18:00 (06:00 pm)</dd>
+													<dt>Price</dt>
+													<dd>60 USD (60 mins)</dd>
+													<dt>Payment</dt>
+													<dd>Paid Successfully</dd>
+												</dl>
+
+											</div>
+											<div class=" col-lg-6 col-12 order-photo">
+												<img src="assets/images/pilot/author/07.jpg" />
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+							<div id="three" class="tabcontent tab-pane fade">
+								<div class="download-video">
+									<div class="d-flex justify-content-between">
+										<div class="download-data">
+											<dl>
+												<dt>Location:</dt>
+												<dd>Cairo Tower, Cairo, Egypt</dd>
+												<dt>Date:</dt>
+												<dd>02 Dec 2020</dd>
+											</dl>
+
+											<h5>Add A Review</h5>
+											<div><span>Your Rating:</span>
+												<div class="rating">
+													<i class="icofont-star"></i>
+													<i class="icofont-star"></i>
+													<i class="icofont-star"></i>
+													<i class="icofont-star"></i>
+													<i class="icofont-star"></i>
+												</div>
+											</div>
+											<form>
+												<div class="form-group">
+													<textarea class="form-control"></textarea>
+												</div>
+												<button class="drone-btn style-2"><span>SUBMIT REVIEW</span></button>
+											</form>
+										</div>
+										<div class="download-btn">
+											<div class="photo-groups">
+												<div class="upload-photo">
+													<div class="photo-mat-icon">
+														Download <i class="icofont-download"></i>
+													</div>
+												
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--------End Client Profile-------->
+
+	<!-- Footer Section Start Here -->
+	<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-top">
+				<div class="footer-area text-center">
+					<div class="footer-logo">
+						<a href="index.html"><img src="assets/images/logo/01.png" alt="footer-logo"></a>
+					</div>
+					<div class="scocial-media">
+						<a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+						<a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+						<a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+						<a href="#" class="vimeo"><i class="icofont-vimeo"></i></a>
+					</div>
+					<div class="footer-menu">
+						<ul>
+							<li><a href="#">HOME</a></li>
+							<li><a href="#">ABOUT</a></li>
+							<li><a href="#">GALLERY</a></li>
+							<li><a href="#">FINE DRONE</a></li>
+							<li><a href="#">CONTACT</a></li>
+							<li><a href="#" class="joinUs">JOIN US</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom text-center">
+				<p>&copy; 2020 <a href="#"><span>Dronday</span></a> Designed by <a href="https://www.egnol.com"
+						target="_blank"><span>Egnol</span></a>.</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Section Ending Here -->
+
+	<!-- scrollToTop start here -->
+	<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i>
+		<span><img src='assets/images/about/home-4/icon/icon-tab-1.svg'></span>
+	</a>
+	<!-- scrollToTop ending here -->
+
+
+
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/waypoints.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/swiper.min.js"></script>
+	<script src="assets/js/lightcase.js"></script>
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<script src="assets/js/functions.js"></script>
+</body>
+
+</html>
