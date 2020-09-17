@@ -166,9 +166,28 @@
         background-color: rgba(255,255,255,.8);
         padding:30px 20px 50px;
         @include breakpoint(sm){
-            padding:50px 50px 70px; 
-            max-width: 1300px;
+            margin-top: 70px;
+            margin-bottom: 70px;
         }
+        @include breakpoint(md){
+            padding:50px 50px 70px; 
+            max-width: 700px;
+        }
+        @include breakpoint(lg){
+            max-width: 900px;
+        }
+        @include breakpoint(xl){
+            max-width: 87%;
+
+        }
+    }
+}
+
+.sec-body{
+    background-color: $white-color;
+    padding:2rem 1rem;
+    @include breakpoint(sm){
+        padding:5rem 3rem;
     }
 }
 .padding-tb {
@@ -204,12 +223,15 @@
 }
 .drone-btn {
     display: inline-block;
-    padding: 10px 80px;
+    padding: 5px 20px;
     background: $primary-color;
     border-radius: 2px;
     border: transparent;
     @extend %rel;
     @extend %hidden;
+    @include breakpoint(md){
+        padding: 10px 80px;
+    }
     &::after {
         @extend %abs;
         width: 100%;
@@ -230,7 +252,10 @@
         font-weight: 600;
         color: $white-color;
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 15px;
+        @include breakpoint(md){
+            font-size: 20px;
+        }
     }
     &:hover {
         &::after {
@@ -266,6 +291,9 @@
     }
     &.white-color{
         background-color: #fff;
+        span{
+            color:#555;
+        }
         &:hover{
             span{
                 color:#eee;
@@ -702,14 +730,14 @@
                 .tablinks {
                     // padding: 10px 8px;
                     background: $border-color;
-                    margin: 5px;
+                    margin-#{$right}: 5px;
+                    padding: 0;
                     // border: 1px solid $border-color;
                     cursor: pointer;
                     @extend %rel;
                     @include breakpoint(md) {
                         margin: 0 5px;
                         // padding: 10px 20px;
-                        padding:0;
                     }
                     &:first-child {
                         @include breakpoint(sm) {
@@ -734,6 +762,15 @@
                             transform-origin: $right;
                             transform: scaleX(1);
                         }
+                    }
+                    .nav-link {
+                        padding: .25rem;
+                        font-size: 10px;
+                        @include breakpoint(sm){
+                            padding: .5rem 1rem;
+                            font-size: 15px;
+                        }
+
                     }
                 }
             }
@@ -1776,7 +1813,7 @@
             border-radius: 5px;
         }
         .photo-mat-icon{
-            font-size: 16px;
+            font-size: 13px;
             background: $primary-color;
             height: 40px;
             border-radius: 1px;
@@ -1786,6 +1823,9 @@
             margin-bottom: 5px;
             i{
                 font-size: 18px;
+            }
+            @include breakpoint(md){
+                font-size: 16px;
             }
         }
         .photo-mat-src{

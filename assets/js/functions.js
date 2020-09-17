@@ -302,4 +302,11 @@
 
     /**********************End open photos in pilot profile********************** */
 
+    /*************************Join Us******************** */
+    $('.join-intro button').on('click',function(){
+        $('.join-intro').fadeOut(500,function(){
+            $('.pilot-registration').fadeIn();
+        });
+        
+    });
 }(jQuery));

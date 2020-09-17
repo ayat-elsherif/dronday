@@ -733,11 +733,21 @@
         }
     }
     &.style-2 {
-        background: url(../../assets/images/page-header/bg.jpg) no-repeat;
+        background: url(../../assets/images/page-header/bg-mobile.jpg) no-repeat;
         background-position: bottom center;
-        background-size: cover;
+        background-size: contain;
+        background-color: #e8f5fd;
+        @include breakpoint(md){
+            background: url(../../assets/images/page-header/bg.jpg) no-repeat;
+            background-position: bottom center;
+            background-size: cover; 
+        }
         // @include breakpoint(sm) {
         //     height: 500px;
+        // }
+        // .page-banner{
+        //     position: absolute;
+        //     top:-5px;
         // }
         .page-title {
             h3 {

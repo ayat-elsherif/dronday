@@ -189,24 +189,24 @@
 
 	<!--------- Client profile--------->
 	<div class="main-body">
-		<div class="review single padding-tb">
+		<div class="review single">
 			<div class="container">
 				<div class="section-wrapper">
 					<div class="related">
 						<ul class="tab-bar nav nav-tabs" id="myTab" role="tablist">
-							<li class="tablinks nav-item" id="defaultOpen" onclick="openCity(event, 'one')">
+							<li class="tablinks nav-item" id="defaultOpen">
 								<a class="nav-link active" id="home-tab" data-toggle="tab" href="#one" role="tab"
 									aria-controls="home" aria-selected="true">
 									My Profile
 								</a>
 							</li>
-							<li class="tablinks nav-item" onclick="openCity(event, 'two')">
+							<li class="tablinks nav-item">
 								<a class="nav-link" id="home-tab" data-toggle="tab" href="#two" role="tab"
 									aria-controls="home" aria-selected="true">
 									My Requests (5)
 								</a>
 							</li>
-							<li class="tablinks nav-item" onclick="openCity(event, 'three')">
+							<li class="tablinks nav-item" >
 
 								<a class="nav-link" id="home-tab" data-toggle="tab" href="#three" role="tab"
 									aria-controls="home" aria-selected="true">
@@ -221,31 +221,30 @@
 										<ul>
 											<li>
 												<div class="left">Name</div>
-												<div class="right pilotName"><span class="">Om Hassan</span> <i
+												<button class="right clientName"><span class="">Ahmed Mamdouh</span> <i
 														class="icofont-ui-edit"></i>
-												</div>
+												</button>
 											</li>
 											<li>
 												<div class="left">Email</div>
-												<div class="right pilotEmail">A@yahoo.com <i
+												<button class="right clientEmail">A@yahoo.com <i
 														class="icofont-ui-edit"></i>
-												</div>
+												</button>
 
 											</li>
 
 											<li>
 												<div class="left">Phone</div>
-												<div class="right pilotPhone">0552060703 <i class="icofont-ui-edit"></i>
-												</div>
+												<button class="right clientPhone">0552060703 <i class="icofont-ui-edit"></i>
+												</button>
 
 											</li>
 											<li>
 												<div class="left">Password</div>
-												<div class="right pilotPass"><span>*********</span><i
+												<button class="right clientPass"><span>*********</span><i
 														class="icofont-ui-edit"></i>
-													<output hidden></output>
-													<!---- password real value returns here----->
-												</div>
+													<output hidden></output><!---- password real value returns here----->
+												</button>
 
 											</li>
 
@@ -273,14 +272,14 @@
 													<dd>(not completed)</dd>
 												</dl>
 												<div class="button-groups">
-													<a class="drone-btn style-2"> Cancel</a>
-													<a class="drone-btn style-2"> Confirm & Payment</a>
+													<a class="drone-btn style-2"> <span>Cancel</span></a>
+													<a class="drone-btn style-2"> <span>Confirm & Payment</span></a>
 												</div>
 											</div>
 											<div class="col-lg-6 col-12 order-photo">
 												<img src="assets/images/pilot/author/07.jpg" />
-												<p class="text-center"><small><i class="icofont-exchange"></i> Change
-														this pilot</small></p>
+												<p class="text-center"><small><a href="#"><i class="icofont-exchange"></i> Change
+													this pilot</a></small></p>
 											</div>
 
 										</div>
@@ -302,50 +301,24 @@
 													<dd>(not completed)</dd>
 												</dl>
 												<div class="button-groups">
-													<a class="drone-btn style-2"> Cancel</a>
+													<a class="drone-btn style-2"> <span>Cancel</span></a>
 													<button class="drone-btn style-2" disabled> Confirm &
 														Payment</button>
 												</div>
 											</div>
 
 											<div class='col-lg-6 col-12 client-alert'>
-												<h6 class="text-center">
-													Your Request Not Yet Accepted By Pilots</h6>
-												<p class="text-center"><small>You Will See Here Profile Of Pilot Who Is
-														Accept Your Request</small></p>
-											</div>
 
-
-										</div>
-
-									</div>
-									<div class="order-item">
-										<div class="row justify-content-between">
-											<div class="col-lg-6 col-12">
-												<dl>
-													<dt>Location</dt>
-													<dd>Cairo Tower, Cairo,Egypt</dd>
-													<dt>Date</dt>
-													<dd>02 Dec 2018</dd>
-													<dt>Time</dt>
-													<dd> 18:00 (06:00 pm)</dd>
-													<dt>Price</dt>
-													<dd>60 USD (60 mins)</dd>
-													<dt>Payment</dt>
-													<dd>(not completed)</dd>
-												</dl>
-												<div class="button-groups">
-													<a class="drone-btn style-2"> Cancel</a>
-													<button class="drone-btn style-2" disabled> Confirm &
-														Payment</button>
+												<div class="text-center d-flex align-items-center justify-content-center">
+													<i class="icofont-exclamation-circle"></i>
+													<div class="alert-msg">
+														<h6 class="text-left">
+															Your Request Not Yet Accepted By Pilots</h6>
+														<p class="text-left"><small>You Will See Here Profile Of Pilot Who Is
+																Accept Your Request</small></p>
+													</div>
 												</div>
-											</div>
-
-											<div class='col-lg-6 col-12 client-alert'>
-												<h6 class="text-center">
-													Your Request declined By Pilots</h6>
-												<p class="text-center"><small>The location you choosed no-fly
-														zone</small></p>
+											
 											</div>
 
 
@@ -368,17 +341,62 @@
 													<dd>(not completed)</dd>
 												</dl>
 												<div class="button-groups">
-													<a class="drone-btn style-2"> Cancel</a>
+													<a class="drone-btn style-2"> <span>Cancel</span></a>
 													<button class="drone-btn style-2" disabled> Confirm &
 														Payment</button>
 												</div>
 											</div>
 
 											<div class='col-lg-6 col-12 client-alert'>
-												<h6 class="text-center">
-													Your Request declined By Pilots</h6>
-												<p class="text-center"><small>Try to increase your drone cost</small>
-												</p>
+												<div class="text-center d-flex align-items-center justify-content-center">
+													<i class="icofont-exclamation-circle"></i>
+													<div class="alert-msg">
+														<h6 class="text-left">
+															Your Request declined By Pilots</h6>
+														<p class="text-left"><small>The location you choosed no-fly
+																zone</small></p>
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+
+									</div>
+									<div class="order-item">
+										<div class="row justify-content-between">
+											<div class="col-lg-6 col-12">
+												<dl>
+													<dt>Location</dt>
+													<dd>Cairo Tower, Cairo,Egypt</dd>
+													<dt>Date</dt>
+													<dd>02 Dec 2018</dd>
+													<dt>Time</dt>
+													<dd> 18:00 (06:00 pm)</dd>
+													<dt>Price</dt>
+													<dd>60 USD (60 mins)</dd>
+													<dt>Payment</dt>
+													<dd>(not completed)</dd>
+												</dl>
+												<div class="button-groups">
+													<a class="drone-btn style-2"> <span>Cancel</span></a>
+													<button class="drone-btn style-2" disabled> Confirm &
+														Payment</button>
+												</div>
+											</div>
+
+											<div class='col-lg-6 col-12 client-alert'>
+												<div class="text-center d-flex align-items-center justify-content-center">
+													<i class="icofont-exclamation-circle"></i>
+													<div class="alert-msg">
+														<h6 class="text-left">
+															Your Request declined By Pilots</h6>
+														<p class="text-left"><small>Try to increase your drone cost</small>
+														</p>
+													</div>
+												</div>
+
+												
 											</div>
 
 
@@ -415,8 +433,8 @@
 							</div>
 							<div id="three" class="tabcontent tab-pane fade">
 								<div class="download-video">
-									<div class="d-flex justify-content-between">
-										<div class="download-data">
+									<div class="row justify-content-between">
+										<div class="download-data col-lg-6 col-12">
 											<dl>
 												<dt>Location:</dt>
 												<dd>Cairo Tower, Cairo, Egypt</dd>
@@ -441,7 +459,7 @@
 												<button class="drone-btn style-2"><span>SUBMIT REVIEW</span></button>
 											</form>
 										</div>
-										<div class="download-btn">
+										<div class="download-btn col-lg-6 col-12">
 											<div class="photo-groups">
 												<div class="upload-photo">
 													<div class="photo-mat-icon">
@@ -452,6 +470,11 @@
 											</div>
 										</div>
 									</div>
+									<!-- <div class="no-videos">
+										<p><small><strong>You don't have any files (video, photo) for download</strong></small></p>
+										<p><small>after you meet the Pilot you will receive your files heref Pilot Who Is Accept Your Reques</small>
+										</p>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -509,12 +532,52 @@
 	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/waypoints.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
+	<!----------------inline editor for editing profile on spot------------->
+	<script src='assets/js/inline-edit.jquery.js'></script>
+	<!---------------- end inline editor for editing profile on spot------------->
 	<script src="assets/js/isotope.pkgd.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/swiper.min.js"></script>
 	<script src="assets/js/lightcase.js"></script>
 	<script src="assets/js/jquery.counterup.min.js"></script>
 	<script src="assets/js/functions.js"></script>
+	<script>
+			
+		/********************************edit Profile in place******************************* */
+				$(".clientName").inlineEdit({
+
+				type:'text'
+
+				});
+
+
+				$(".clientEmail").inlineEdit({
+
+				type:'text'
+
+				});
+
+				$(".clientPhone").inlineEdit({
+
+				type:'text'
+
+				});
+				$(".clientPass").inlineEdit({
+
+				type:'password',
+				onEdit:function (el) {
+					el.find('input').attr('type','password');
+				return el.find('input').val();
+					},
+				onChange:function (el){  
+				el.find('output').text(el.find('span').text());
+				el.find('span').text('*********');
+				}
+				});
+
+		/**************************End Edit Profile in place***************************** */
+
+</script>
 </body>
 
 </html>
