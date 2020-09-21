@@ -267,9 +267,16 @@
         overflow: visible;
         background: transparent;
         border: 2px solid $theme-color;
-        padding: 14px 30px;
+        padding: 2px 5px;
         span {
             color: $theme-color;
+            font-size: 13px;
+        }
+        @include breakpoint(sm){
+            padding: 5px 10px;
+            span{
+                font-size: 16px;
+            }
         }
         &::after {
             background: $theme-color;

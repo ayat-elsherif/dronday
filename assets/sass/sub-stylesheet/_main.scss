@@ -376,6 +376,227 @@
     }
 }
 
+/* @@@@@@@@@@@@@  Pilot  Section Start Here  @@@@@@@@@@@@@@ */
+.pilot-tabs{
+    .section-wrapper {
+        .related {
+            .tab-bar {
+                margin-bottom: 0;
+                border-bottom: none;
+                .tablinks{
+                    padding: 10px;
+                    flex-grow: 1;
+                    margin-bottom: 5px;
+                    text-align: center;
+                    &.active{
+                        border:1px solid $border-color !important;
+                        &:after{
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+            .tabcontent{
+                padding: 30px 10px !important;
+                border:1px solid $border-color;
+                border-radius: 5px;
+                margin-top: 15px;
+                .spe-shop {
+                    .tec-spe {
+                        margin-top: 0 !important;
+                        ul{
+                            li{
+                                padding-top:8px !important;
+                                padding-bottom: 8px !important;
+                            }
+                        }
+                    }
+                }
+                .pilotAvailability{
+                    font-weight: 300;
+                    @include breakpoint(md){
+                        padding-#{$left}:20px;
+                    }
+                    h5{
+                        font-size: 18px;
+                        margin-bottom: 0;
+                        @include breakpoint(md){
+                            font-size: 20px;
+                        }
+                        &.pilot-avail{
+                            color:$skyblue-color;
+                            position: relative;
+                            padding-#{$left}:20px;
+                            font-weight: 400;
+                            &:before{
+                                content:'';
+                                position: absolute;
+                                #{$left}:0;
+                                top:5px;
+                                width: 12px;
+                                height: 12px;
+                                border-radius:50%;
+                                background-color:$skyblue-color;
+                            }
+                        }
+                    }
+                    input,select{
+                        &:focus{
+                            box-shadow: none;
+                        }
+                    }
+                    .availLocation{
+                        background: transparent;
+                        border: transparent;
+                        margin-bottom: 20px;
+                        font-size: 17px;
+                        font-weight: 300;
+                        display: inline-block;
+                        i{
+                            background: #e5e5e5;
+                            width: 22px;
+                            height: 22px;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 24px;
+                            display: inline-block;
+                            font-size: 11px;
+                            margin: auto .75rem;
+                        }
+                    }
+                    .clientRadius{
+                        width:45%;
+                        display: inline-block;
+                        @include breakpoint(sm){
+                            width:25%;
+                        }
+                        @include breakpoint(lg){
+                            width:12%;
+                        }
+                        input,select{
+                            width:100%;
+                            padding: 9px 20px;
+                            background: transparent;
+                            z-index: 1;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            border: 1px solid #e6e6e6;
+                            color:$desc-color;
+                        }
+                        .select-icon{
+                            background: transparent;
+                            color: #bbb;
+                            border: none;
+                            padding: 10px 8px;
+                        }
+                    }
+                    .availableDays{
+                        label{
+                            font-weight: 700;
+                            margin-bottom: 0;
+                        }
+                        input[type='checkbox']{
+                            width:20px;
+                            margin:auto;
+                        }
+                    }
+                    .drone-btn.style-2{
+                        padding: 5px 20px;
+                        span{
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .pilot-requests{
+                    .order-item{
+                        background-color:#f5f5f5;
+                        padding:20px;
+                        margin-bottom: 15px;
+                        border: 1px solid $border-color;
+                        .requestDetails{
+                            background-color: #fff;
+                            padding:5px 10px;
+                            margin-bottom: 20px;
+                            box-shadow: 1px 1px 5px #88888833;
+                            &.congrats{
+                                background-color: $section-color;
+                            }
+                            p{
+                                margin-bottom: 0;
+                                line-height: 18px;
+                                font-size: 14px;
+                                b{
+                                    margin-#{$left}:5px;
+                                }
+                                &.req-active,&.req-wait,&.req-deactive{
+                                    position: relative;
+                                    margin-#{$left}:12px ;
+                                    &:before{
+                                        content:'';
+                                        position: absolute;
+                                        width:10px;
+                                        height: 10px;
+                                        border-radius: 50%;
+                                        left:-11px;
+                                        top:5px;
+                                    }
+                                }
+                                &.req-active{
+                                    &:before{
+                                        background-color:$skyblue-color;
+                                    }
+                                }
+                                &.req-deactive{
+                                    &:before{
+                                        background-color:$title-color;
+                                    }
+                                }
+                                &.req-wait{
+                                    &:before{
+                                        font-family: IcoFont!important;
+                                        font-size: .75rem;
+                                        line-height: .9;
+                                        left: -12px;
+                                        content:'\efa9';
+                                    }
+                                }
+                            }
+                        }
+                        dl{
+                            margin-bottom: 20px;
+                            dt,dd{
+                                display:block;
+                               
+                            }
+                            dt,dd{
+                            
+                                width: 100%;
+                                margin-bottom: 5px;
+                            }
+                            @include breakpoint(md){
+                                dt,dd{
+                                    display: inline-block;
+                                }
+                                dt{
+                                    width:15%;
+                                }
+                                dd{
+                                   width: 70%;
+                                }
+                            }
+                        }
+                        .button-group{
+                            .drone-btn{
+                                margin-#{$right}:15px;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
 /*@@@@@@@@@@@@@@ Pilot join form @@@@@@@@@@@@@@@@*/
 .join-intro{
     width: 100%;
@@ -945,7 +1166,7 @@
         margin-bottom: 2rem;
     }
     h4{
-        color:#009fe3;
+        color:$skyblue-color;
     }
     h3{
         line-height: 2.3rem;
@@ -2195,8 +2416,8 @@
                                     }
                                 }
                                 .right{
-                                    width: auto !important;
-                                    max-width: 65%;
+                                    width: auto;
+                                    max-width: 100%;
                                     cursor: pointer;
                                     background: transparent;
                                     border: none;
