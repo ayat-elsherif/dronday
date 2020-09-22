@@ -27,6 +27,38 @@
 	<!------switch between ltr - rtl ------>
 	<body>
 
+        <!--------------------------cancel modal--------------------------->
+
+        <div class="modal fade" id="cancelReqModal" tabindex="-1" role="dialog" aria-labelledby="cancelReqModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="icofont-close-line"></i></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h6>please let us know the reason of the decline </h6>
+                  <form>
+                     <div class="form-group">
+                        <label><input type="checkbox" name="declineReason" value='lawCost'> Cost not good</label>
+                     </div>
+                     <div class="form-group">
+                        <label><input type="checkbox" name="declineReason" value='noFlyZone'> No-fly zone</label>
+                     </div>
+                     <div class="form-group">
+                        <label><input type="checkbox" name="declineReason" value='pilotBusy'> I'm busy</label>
+                     </div>
+                     
+                  </form>
+                </div>
+                <div class="mb-3 text-center">
+                  <button type="button" class="drone-btn style-2"><span>Decline</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!------------------------------End Cancel Modal--------------------->
 
 		<!-- preloader -->
 		<!-- <div class="preloader"><div class="load loade"><hr/><hr/><hr/><hr/></div></div> -->
@@ -419,6 +451,8 @@
                                                                     <dd>02 Dec 2018</dd>
                                                                     <dt>Time</dt>
                                                                     <dd> 18:00 (06:00 pm)</dd>
+                                                                    <dt>Drone Mission</dt>
+                                                                    <dd>Tourism</dd>
                                                                     <dt>Price</dt>
                                                                     <dd>60 USD (60 mins)</dd>
                                                                     <dt>Payment</dt>
@@ -428,7 +462,7 @@
                                                                     <button class="drone-btn style-2">
                                                                         <span>Accept</span>
                                                                     </button>
-                                                                    <button class="drone-btn style-2">
+                                                                    <button class="drone-btn style-2" data-toggle="modal" data-target="#cancelReqModal">
                                                                         <span>Reject</span>
                                                                     </button>
                                                                 </div>
@@ -446,6 +480,8 @@
                                                                     <dd>02 Dec 2018</dd>
                                                                     <dt>Time</dt>
                                                                     <dd> 18:00 (06:00 pm)</dd>
+                                                                    <dt>Drone Mission</dt>
+                                                                    <dd>Tourism</dd>
                                                                     <dt>Price</dt>
                                                                     <dd>60 USD (60 mins)</dd>
                                                                     <dt>Payment</dt>
@@ -455,7 +491,7 @@
                                                                     <button class="drone-btn style-2">
                                                                         <span>Accept</span>
                                                                     </button>
-                                                                    <button class="drone-btn style-2">
+                                                                    <button class="drone-btn style-2" data-toggle="modal" data-target="#cancelReqModal">
                                                                         <span>Reject</span>
                                                                     </button>
                                                                 </div>
@@ -472,6 +508,8 @@
                                                                     <dd>02 Dec 2018</dd>
                                                                     <dt>Time</dt>
                                                                     <dd> 18:00 (06:00 pm)</dd>
+                                                                    <dt>Drone Mission</dt>
+                                                                    <dd>Tourism</dd>
                                                                     <dt>Price</dt>
                                                                     <dd>60 USD (60 mins)</dd>
                                                                     <dt>Payment</dt>
@@ -481,7 +519,7 @@
                                                                     <button class="drone-btn style-2">
                                                                         <span>Accept</span>
                                                                     </button>
-                                                                    <button class="drone-btn style-2">
+                                                                    <button class="drone-btn style-2" data-toggle="modal" data-target="#cancelReqModal">
                                                                         <span>Reject</span>
                                                                     </button>
                                                                 </div>
@@ -498,6 +536,8 @@
                                                                     <dd>02 Dec 2018</dd>
                                                                     <dt>Time</dt>
                                                                     <dd> 18:00 (06:00 pm)</dd>
+                                                                    <dt>Drone Mission</dt>
+                                                                    <dd>Tourism</dd>
                                                                     <dt>Price</dt>
                                                                     <dd>60 USD (60 mins)</dd>
                                                                     <dt>Payment</dt>
@@ -507,7 +547,7 @@
                                                                     <button class="drone-btn style-2">
                                                                         <span>Accept</span>
                                                                     </button>
-                                                                    <button class="drone-btn style-2">
+                                                                    <button class="drone-btn style-2" data-toggle="modal" data-target="#cancelReqModal">
                                                                         <span>Reject</span>
                                                                     </button>
                                                                 </div>
@@ -524,6 +564,8 @@
                                                                     <dd>02 Dec 2018</dd>
                                                                     <dt>Time</dt>
                                                                     <dd> 18:00 (06:00 pm)</dd>
+                                                                    <dt>Drone Mission</dt>
+                                                                    <dd>Tourism</dd>
                                                                     <dt>Price</dt>
                                                                     <dd>60 USD (60 mins)</dd>
                                                                     <dt>Payment</dt>
@@ -533,7 +575,7 @@
                                                                     <button class="drone-btn style-2">
                                                                         <span>Accept</span>
                                                                     </button>
-                                                                    <button class="drone-btn style-2">
+                                                                    <button class="drone-btn style-2" data-toggle="modal" data-target="#cancelReqModal">
                                                                         <span>Reject</span>
                                                                     </button>
                                                                 </div>
@@ -541,230 +583,58 @@
                                                         </div>   
                                                     </div>
                                                     <div id="four" class="tabcontent">
-                                                        <!-- <div class="pilot-orders">
-                                                            <div class="order-item">
-                                                                <div class="row">
-                                                                    <div class="col-lg-3 col-md-4 col-12 order-photo"><img src="assets/images/popular-drone/01.jpg" /></div>
-                                                                    <div class="col-lg-7 col-md-5 col-12">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-5 col-12 order-desc">
-                                                                                <p>dragon express</p>
-                                                                                <span>20 AED</span>
-                                                                            </div>
-                                                                            <div class="col-lg-5 col-12 order-status">
-                                                                                <select name="" id="">
-                                                                                    <option value="">Start Cooking</option>
-                                                                                    <option value="">Cancel</option>
-                                                                                    <option value="">Ready For Delivery</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-2 col-md-3 col-12 align-self-end order-delete">
-                                                                        <p>Delete <i class="icofont-close-line"></i></p>
-                                                                    </div>
+                                                        <div class="pilot-payment">
+                                                            <h6>Receive payments</h6>
+                                                            <p>Please choose at least one method</p>
+                                                            <div class="paymentWay">
+                                                                <img src="assets/images/payment/01.jpg">
+                                                                <div class="form-group">
+                                                                    <textarea type="text" name='bankTransfer' class="form-control" 
+                                                                    placeholder="Type your Account Bank details here"></textarea>
                                                                 </div>
                                                             </div>
-                                                            <div class="order-item">
-                                                                <div class="row">
-                                                                    <div class="col-lg-3 col-md-4 col-12 order-photo"><img src="assets/images/popular-drone/01.jpg" /></div>
-                                                                    <div class="col-lg-7 col-md-5 col-12">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-5 col-12 order-desc">
-                                                                                <p>dragon express</p>
-                                                                                <span>20 AED</span>
-                                                                            </div>
-                                                                            <div class="col-lg-5 col-12 order-status">
-                                                                                <select name="" id="">
-                                                                                    <option value="">Start Cooking</option>
-                                                                                    <option value="">Cancel</option>
-                                                                                    <option value="">Ready For Delivery</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-2 col-md-3 col-12 align-self-end order-delete">
-                                                                        <p>Delete <i class="icofont-close-line"></i></p>
-                                                                    </div>
+                                                            <div class="paymentWay">
+                                                                <img src="assets/images/payment/02.jpg">
+                                                                <div class="form-group">
+                                                                    <textarea type="text" name='paypalTransfer' class="form-control" 
+                                                                    placeholder="Type your Paypal Email Account here"></textarea>
                                                                 </div>
                                                             </div>
-                                                            <div class="order-item">
-                                                                <div class="row">
-                                                                    <div class="col-lg-3 col-md-4 col-12 order-photo"><img src="assets/images/popular-drone/01.jpg" /></div>
-                                                                    <div class="col-lg-7 col-md-5 col-12">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-5 col-12 order-desc">
-                                                                                <p>dragon express</p>
-                                                                                <span>20 AED</span>
-                                                                            </div>
-                                                                            <div class="col-lg-5 col-12 order-status">
-                                                                                <select name="" id="">
-                                                                                    <option value="">Start Cooking</option>
-                                                                                    <option value="">Cancel</option>
-                                                                                    <option value="">Ready For Delivery</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-2 col-md-3 col-12 align-self-end order-delete">
-                                                                        <p>Delete <i class="icofont-close-line"></i></p>
-                                                                    </div>
+                                                            <div class="paymentWay">
+                                                                <img src="assets/images/payment/03.jpg">
+                                                                <div class="form-group">
+                                                                    <textarea type="text" name='westernUnionTransfer' class="form-control" 
+                                                                    placeholder="Type your Full Name, Country, Phone"></textarea>
                                                                 </div>
                                                             </div>
-                                                        </div>    -->
+                                                            <p><small>The transfer fee will be deducted from your amount</small></p>
+                                                            <div class="button-group">
+                                                                <button class="drone-btn style-2"><span>Update Payment</span></button>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div id="five" class="tabcontent">
-                                                        <!-- <div class="add-new-matbokh">
-                                                            <a href="pilot-new-matbokh.html"><i class="icofont-restaurant"></i> Add New Matbokh</a>  
-                                                        </div> -->
-                                                        <!-- <div class="row">
-                                                            <div class="col-md-6 col-12">
-                                                                <div class="p-drone-item">
-                                                                    <div class="p-drone-inner">
-                                                                        <div class="p-drone-thumb">
-                                                                            <img src="assets/images/popular-drone/01.jpg" alt="p-drone">
-                                                                            <span>150 AED</span>
-                                                                            <span class='p-drone-status'><i class="icofont-restaurant active"></i> Active</span>
-                                                                        </div>
-                                                                        <div class="p-drone-content">
-                                                                            <div class="p-drone-author">
-                                                                                <a href="#"><img src="assets/images/pilot/author/01.jpg" alt="drone-author"></a>
+                                                            <div class="pilot-gallery">
+                                                                <form id='gallery-form' class='gallery-form' method='post'>
+                                                                    <!-- <label for='files'>Select multiple files: </label> -->
+                                                                    <a class="gallery-photo"> <span><i class="icofont-camera"></i> Add Photo</span></a>
+                                                                    <input id='photo-files' class="upload-files" type='file' multiple accept="image/*" hidden/>
+                                                                    <a class=" gallery-video"> <span><i class="icofont-youtube-play"></i> Add Video</span></a>
+                                                                    <input id='video-files' class="upload-files" type='file' multiple accept="video/*" hidden/>
+
+                                                                    <output id='result' class="row">
+                                                                            <div class="gallery-item col-lg-4 col-md-6 col-12">
+                                                                                <img src='assets/images/pilot/01.jpg' >
                                                                             </div>
-                                                                            <h6><a href="#">Dragon Express</a></h6>
-                                                                            <div class="p-drone-group">
-                                                                                <span>Type of drone :</span>
-                                                                                <a href="#">Beef Roast</a>
-                                                                                <a href="#">Pizza</a>
-                                                                                <a href="#">Stakes</a>
+                                                                            <div class="gallery-item col-lg-4 col-md-6 col-12">
+                                                                                <img src='assets/images/pilot/02.jpg' >
                                                                             </div>
-                                                                            <div class="del-time">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <i class="icofont-user"></i>
-                                                                                        <div class="time-tooltip">
-                                                                                            <div class="time-tooltip-holder">
-                                                                                                <span class="tooltip-label">Delivery time</span>
-                                                                                                <span class="tooltip-info">Your order will be delivered in 20 minutes.</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <i class="icofont-bag"></i>
-                                                                                        <div class="time-tooltip">
-                                                                                            <div class="time-tooltip-holder">
-                                                                                                <span class="tooltip-label">Delivery time</span>
-                                                                                                <span class="tooltip-info">Your order will be delivered in 20 minutes.</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <i class="icofont-stopwatch"></i>
-                                                                                        <div class="time-tooltip">
-                                                                                            <div class="time-tooltip-holder">
-                                                                                                <span class="tooltip-label">Pickup time</span>
-                                                                                                <span class="tooltip-info">You can pickup order in 20 minutes.</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                </ul>
-                                                                                <div class="p-edit-icons">
-                                                                                    <i class="icofont-ui-edit"></i>
-                                                                                    <i class="icofont-close-line"></i>
-                                                                                </div>
-                                                                            </div>
-                                                                           
-                                                                            <div class="p-drone-footer">
-                                                                                <div class="left">
-                                                                                    <div class="rating">
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="right text-left"><i class="icofont-home"></i>Ajman, ALRawda</div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                        </output>
+                                                                  </form>  
                                                             </div>
-                                                            <div class="col-md-6 col-12">
-                                                                <div class="p-drone-item">
-                                                                    <div class="p-drone-inner">
-                                                                        <div class="p-drone-thumb">
-                                                                            <img src="assets/images/popular-drone/01.jpg" alt="p-drone">
-                                                                            <span>150 AED</span>
-                                                                            <span class='p-drone-status'><i class="icofont-restaurant reviewed"></i> reviewed</span>
-                                                                        </div>
-                                                                        <div class="p-drone-content">
-                                                                            <div class="p-drone-author">
-                                                                                <a href="#"><img src="assets/images/pilot/author/01.jpg" alt="drone-author"></a>
-                                                                            </div>
-                                                                            <h6><a href="#">Dragon Express</a></h6>
-                                                                            <div class="p-drone-group">
-                                                                                <span>Type of drone :</span>
-                                                                                <a href="#">Beef Roast</a>
-                                                                                <a href="#">Pizza</a>
-                                                                                <a href="#">Stakes</a>
-                                                                            </div>
-                                                                            <div class="del-time">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <i class="icofont-user"></i>
-                                                                                        <div class="time-tooltip">
-                                                                                            <div class="time-tooltip-holder">
-                                                                                                <span class="tooltip-label">Delivery time</span>
-                                                                                                <span class="tooltip-info">Your order will be delivered in 20 minutes.</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <i class="icofont-bag"></i>
-                                                                                        <div class="time-tooltip">
-                                                                                            <div class="time-tooltip-holder">
-                                                                                                <span class="tooltip-label">Delivery time</span>
-                                                                                                <span class="tooltip-info">Your order will be delivered in 20 minutes.</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <i class="icofont-stopwatch"></i>
-                                                                                        <div class="time-tooltip">
-                                                                                            <div class="time-tooltip-holder">
-                                                                                                <span class="tooltip-label">Pickup time</span>
-                                                                                                <span class="tooltip-info">You can pickup order in 20 minutes.</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                </ul>
-                                                                                <div class="p-edit-icons">
-                                                                                    <i class="icofont-ui-edit"></i>
-                                                                                    <i class="icofont-close-line"></i>
-                                                                                </div>
-                                                                            </div>
-                                                                           
-                                                                            <div class="p-drone-footer">
-                                                                                <div class="left">
-                                                                                    <div class="rating">
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="right text-left"><i class="icofont-home"></i>Ajman, ALRawda</div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                     
-                                                        </div> -->
                                                     </div>
                                                     <div id="six" class="tabcontent">
-                                                        <div class="section-wrapper">
+                                                        <div class="section-wrapper pilot-reviews">
                                                             <div class="review">
                                                                 <ul class="content">
                                                                     <li>
@@ -1027,7 +897,46 @@
                             });
 
 					/**************************End Edit Profile in place***************************** */
-
+                            let photoGallery=document.getElementsByClassName('gallery-photo');
+                            // let videoGallery=document.getElementsByClassName('gallery-video');
+                            $(photoGallery).on('click',function(){
+                               $(this).next('.upload-files').click();
+                               
+                            });
+          
+                            window.onload = function() {
+                            //Check File API support
+                            if (window.File && window.FileList && window.FileReader) {
+                                var filesInput = ".upload-files";
+                                // filesInput.addEventListener("change", function(event) {
+                                 $(filesInput).on('change',function(event){
+                                    console.log($(filesInput).val());
+                                var files = event.target.files; //FileList object
+                                var output = document.getElementById("result");
+                                for (var i = 0; i < files.length; i++) {
+                                    var file = files[i];
+                                    //Only pics
+                                    // if (!file.type.match('image'))
+                                    // continue;
+                                    var picReader = new FileReader();
+                                    picReader.addEventListener("load", function(event) {
+                                    var picFile = event.target;
+                                    
+                                    var div = document.createElement("div");
+                                    div.classList.add('gallery-item','col-12', 'col-lg-4','col-md-6');
+                                    div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
+                                        "title='" + picFile.name + "'/>";
+                                        // output.insertBefore(div, null);
+                                    $(output).prepend(div);
+                                    });
+                                    //Read the image
+                                    picReader.readAsDataURL(file);
+                                }
+                                });
+                            } else {
+                                console.log("Your browser does not support File API");
+                            }
+                            }
 		</script>
 	</body>
 </html>

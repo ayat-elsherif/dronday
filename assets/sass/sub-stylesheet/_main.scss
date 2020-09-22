@@ -564,9 +564,10 @@
                         }
                         dl{
                             margin-bottom: 20px;
+                            font-size: 13px;
                             dt,dd{
                                 display:block;
-                               
+                               margin-#{$left}: 5px;
                             }
                             dt,dd{
                             
@@ -593,9 +594,114 @@
                     }
                    
                 }
+                .pilot-payment{
+                    padding: 10px;
+                    @include breakpoint(md){
+                        padding:30px 50px;
+                    }
+                    h6{
+                        margin-bottom: 0;
+                        font-weight: 700;
+                    }
+                    .paymentWay{
+                        display: flex;
+                        margin-bottom: 10px;
+                        img{
+                           height:60px;
+                        }
+                        .form-group{
+                            flex-grow: 1;
+                            margin-bottom: 0;
+                            border:1px solid $border-color;
+                            height: 60px;
+                            textarea{
+                                font-size: .8rem;
+                                height: 100%;
+                                border:none;
+                                padding: 20px 10px 10px;
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                                &::placeholder{
+                                    color:$border-color;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+                .pilot-reviews{
+                    padding:15px;
+                    @include breakpoint(md){
+                        padding:30px;
+                    }
+                }
+                .pilot-gallery{
+                    @include breakpoint(md){
+                        padding:20px 50px
+                    }
+                    #gallery-form{
+                        .gallery-photo, .gallery-video{
+                            margin-bottom: 3rem;
+                             padding:5px 15px;
+                             font-size: 16px;
+                            background-color: $desc-color;
+                            margin-#{$left}:10px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: $desc-color+ee;
+                                
+                            }
+                            span{
+                                color:$ash-color;
+                                i{
+                                    font: 1.2rem;
+                                }
+                            }
+                        }
+                        output{
+                            .gallery-item{
+                                margin-bottom: 2rem;
+                                height: 150px;
+                                overflow: hidden;
+                                img{
+                                    border-radius: 5px;
+                                    min-height: 150px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+}
+
+#cancelReqModal{
+    .modal-content{
+
+        padding:10px 20px;
+    }
+    .close{
+        border:1px solid #212121;
+        border-radius: 5px;
+        padding:7px;
+    }
+    .modal-header{
+        border-bottom: none;
+    }
+  .modal-body{
+      padding:5px 10px;
+    h6{
+        margin-bottom: 15px;
+    }
+    .form-group{
+        margin-bottom: 0;
+        label{
+            margin-bottom: 5px;
+        }
+    }
+  }
 }
 /*@@@@@@@@@@@@@@ Pilot join form @@@@@@@@@@@@@@@@*/
 .join-intro{
@@ -637,49 +743,90 @@
         }
     }
 }
-.join-form{
-    h5{
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-    }
-    input,select,textarea{
-        &:focus{
-            box-shadow: none;
-            border-color:$title-color;
-        }
-    }
-    input::placeholder, select,textarea::placeholder{
-       color:#bbb;
-       font-size: 13px;
-       @include breakpoint(md){
-           font-size: 15px;
-       }
-    }
-    .outline-select{
-        select{
-            padding: 5px 20px;   
-        }
-        .select-icon{
-            background: transparent;
-            color:#bbb;
-            border:none;
-        }
-    }
-    input[type=submit]{
-        width:100%;
+.pilot-registration{
+    .col-lg-6.col-12{
+        padding-left:.75rem;
+        padding-right:.75rem;
+        // margin-bottom: 20px;
         @include breakpoint(md){
-            width:auto;
+            padding-left:2.5rem;
+            padding-right:2.5rem; 
+            margin-bottom: auto; 
         }
+        &.fadeInRight{
+            .form-group{
+                position: relative;
+                input[name='location']{
+                    margin-top: 2.5rem;
+                    padding-#{$left}:35px;
+                    &:focus{
+                        box-shadow: none;
+                        border-color:$title-color;
+                    }
+                }
+                i{
+                    position: absolute;
+                    #{$left}:0;
+                    top: 10px;
+                    left: 10px;
+                    font-size: 20px;
+                
+                }
+            }
+            iframe{
+                height: 200px;
+                @include breakpoint(md){
+                    height: 500px;
+                }
+            }
+        }
+      
     }
-    p{
-        small{
-            font-size: 60%;
+    .join-form{
+        h5{
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        input,select,textarea{
+            &:focus{
+                box-shadow: none;
+                border-color:$title-color;
+            }
+        }
+        input::placeholder, select,textarea::placeholder{
+           color:#bbb;
+           font-size: 13px;
+           @include breakpoint(md){
+               font-size: 15px;
+           }
+        }
+        .outline-select{
+            select{
+                padding: 5px 20px;   
+            }
+            .select-icon{
+                background: transparent;
+                color:#bbb;
+                border:none;
+            }
+        }
+        input[type=submit]{
+            width:100%;
             @include breakpoint(md){
-                font-size: 80%;
+                width:auto;
+            }
+        }
+        p{
+            small{
+                font-size: 60%;
+                @include breakpoint(md){
+                    font-size: 80%;
+                }
             }
         }
     }
 }
+
 
 /* @@@@@@@@@@@@@  Testimonial Section Start Here  @@@@@@@@@@@@@@ */
 .testimonial {
@@ -2417,16 +2564,11 @@
                                 }
                                 .right{
                                     width: auto;
-                                    max-width: 100%;
+                                    max-width: 65%;
                                     cursor: pointer;
                                     background: transparent;
                                     border: none;
-                                    @include breakpoint(sm) {
-                                        width: 50%;
-                                        @include breakpoint(lg) {
-                                            width: 65%;
-                                        }
-                                    }
+                                  
                                 }
                                 i{
                                     background: #e5e5e5;
@@ -2541,11 +2683,7 @@
                         @include breakpoint(lg){
                             width:700px;
                         }
-                        // &:last-child{
-                        //     border-bottom: none;
-                        //     padding-bottom: 0;
-                        //     margin-bottom: 0;
-                        // }
+              
                         dl{
                             dt,dd{
                                 display: inline-block;
@@ -2561,10 +2699,10 @@
                             }
                             @include breakpoint(md){
                                 dt{
-                                    width:30%;
+                                    width:35%;
                                 }
                                 dd{
-                                    width:65%;
+                                    width:60%;
                                 }
                             }
                         }
