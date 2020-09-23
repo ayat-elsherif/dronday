@@ -209,6 +209,9 @@
 
 		 <!-- Page Header Section Start Here -->
          <section class="page-header style-2">
+            <div class="shape-1">
+                <img src="assets/images/banner/shape/01.png" alt="banner">
+            </div>
             <div class="container">
                 <div class="page-title text-center">
                     <h3>Pilot Profile</h3>
@@ -808,7 +811,9 @@
 
 
         <!-- scrollToTop start here -->
-		<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>
+        <a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i>
+            <span><img src="assets/images/about/home-4/icon/icon-tab-1.svg"></span>
+        </a>
 		<!-- scrollToTop ending here -->
 
 
@@ -898,8 +903,13 @@
 
 					/**************************End Edit Profile in place***************************** */
                             let photoGallery=document.getElementsByClassName('gallery-photo');
-                            // let videoGallery=document.getElementsByClassName('gallery-video');
+                            let videoGallery=document.getElementsByClassName('gallery-video');
                             $(photoGallery).on('click',function(){
+                               $(this).next('.upload-files').click();
+                               
+                            });
+
+                            $(videoGallery).on('click',function(){
                                $(this).next('.upload-files').click();
                                
                             });
@@ -921,11 +931,24 @@
                                     var picReader = new FileReader();
                                     picReader.addEventListener("load", function(event) {
                                     var picFile = event.target;
-                                    
+
+                                    if (file.type.startsWith('video/')){ 
                                     var div = document.createElement("div");
-                                    div.classList.add('gallery-item','col-12', 'col-lg-4','col-md-6');
-                                    div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
+                                    div.classList.add('gallery-item','videoItem','col-12', 'col-lg-4','col-md-6');
+                                    div.innerHTML = `
+                                            <video height="100%" width="100%" mute controls>
+                                        <source src="${picFile.result}" id="video_here">
+                                            Your browser does not support HTML5 video.
+                                        </video>`;
+                                        }
+
+                                        if (file.type.startsWith('image/')){
+                                            var div = document.createElement("div");
+                                        div.classList.add('gallery-item','col-12', 'col-lg-4','col-md-6');
+                                        div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
                                         "title='" + picFile.name + "'/>";
+                                        }
+                                    
                                         // output.insertBefore(div, null);
                                     $(output).prepend(div);
                                     });

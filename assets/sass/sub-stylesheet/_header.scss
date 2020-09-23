@@ -657,16 +657,28 @@
         @extend %abs;
     }
     .shape-1 {
-        bottom: -350px;
-        #{$right}: 0;
-        display: none;
+        bottom: 80px;
+        #{$right}: 80px;
+        width: 100px;
+        animation: flying 15s linear 0s infinite normal;
         transform: flip(scaleX(1),scaleX(-1));
+        @include breakpoint(md) {
+             width: 200px;
+             bottom: 40px;
+        }
+        @include breakpoint(lg) {
+            bottom: 150px;
+            #{$right}: 150px;
+       }
         @include breakpoint(xl) {
             display: block;
-            #{$right}: -50px;
+            #{$right}: 120px;
+            width: 300px;
+            bottom: 100px;
         }
         @include breakpoint(xxl) {
-            #{$right}: 0;
+            #{$right}: 180px;
+            bottom: 100px;
         }
     }
     .shape-2 {
@@ -752,6 +764,7 @@
         .page-title {
             h3 {
                 color: $theme-color;
+                position: relative;
             }
             .breadcrumb {
                 li {
@@ -811,5 +824,17 @@
         .contact-thumb {
             display: none;
         }
+    }
+}
+
+
+
+@keyframes flying{
+    0% {
+        transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+  
+    100% {
+        transform: rotate(360deg) translateX(50px) rotate(-360deg);
     }
 }

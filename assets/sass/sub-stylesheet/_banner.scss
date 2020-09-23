@@ -220,34 +220,7 @@
                     }
                 }
             }
-            .p-insurance{
-                padding: .5rem 1rem;
-                margin-top: 15px;
-               @include breakpoint(md){
-                display: flex;
-                align-items: center;
-               }
-                i{
-                    font-size: 40px;
-                    padding: 0 5px;
-                    text-align: center;
-                    display: block;
-                    @include breakpoint(md) {
-                        display: inline-block;
-                        font-size: 36px;
-                        text-align: $left;
-                    }
-                }
-                span {
-                    display:block;
-                    text-align: center;
-                    @include breakpoint(md) {
-                        display: inline-block;
-                        width: 370px;
-                        text-align: $left;
-                    }
-                }
-            }
+           
         }
     }
     &.style-2 {

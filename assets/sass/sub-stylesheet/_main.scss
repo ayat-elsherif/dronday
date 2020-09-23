@@ -703,6 +703,103 @@
     }
   }
 }
+
+/*@@@@@@@@@@@@@@@@@@@ find dd section @@@@@@@@@@@@@@@@@@@@@*/
+.find-dd{
+    .container{
+        padding:0;
+        .banner{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    
+}
+
+.book-drone{
+    padding:15px;
+    @include breakpoint(md){
+        padding: 30px;;
+    }
+    h4{
+        margin-bottom: 0;
+    }
+    h6{
+        font-weight: 400;
+        letter-spacing: -1px;
+    }
+    .form-group{
+        margin-bottom:5px;
+        label{
+            margin-bottom: 0;
+            font-weight: 600;
+            color: $title-color;
+        }
+        select, input{
+            border:1px solid $title-color;
+            border-radius:0;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .outline-select{
+            margin-bottom: 5px;
+            select{
+                padding: 5px 20px;   
+            }
+            .select-icon{
+                background: transparent;
+                color:#bbb;
+                border:none;
+            }
+        }
+        .date-time{
+            position: relative;
+            i{
+                position: absolute;
+                #{$left}: 25px;
+                top: 10px;
+                font-size: 18px;
+            }
+            input{
+                padding-#{$left}:33px;
+            }
+        }
+    }
+    .button-group{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-left:15px;
+        padding-right:15px;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        .drone-btn{
+                padding: 7px 40px;
+                @include breakpoint(md){
+                    padding: 7px 60px;
+                }
+                span{
+                    font-size: 16px;
+                }
+        }
+    }
+}
+
+.find-dd-login{
+    padding:15px;
+    @include breakpoint(md){
+        padding:35px;
+    }
+
+    .dark-button{
+        padding:5px 20px;
+        margin-bottom: 1.5rem;
+        @include breakpoint(md){
+            padding:5px 40px;
+        }
+    }
+}
 /*@@@@@@@@@@@@@@ Pilot join form @@@@@@@@@@@@@@@@*/
 .join-intro{
     width: 100%;
@@ -769,18 +866,10 @@
                     #{$left}:0;
                     top: 10px;
                     left: 10px;
-                    font-size: 20px;
-                
+                    font-size: 20px; 
                 }
             }
-            iframe{
-                height: 200px;
-                @include breakpoint(md){
-                    height: 500px;
-                }
-            }
-        }
-      
+        }  
     }
     .join-form{
         h5{
