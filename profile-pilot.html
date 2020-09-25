@@ -17,10 +17,10 @@
 		<!-- lightcase css -->
 		<link rel="stylesheet" href="assets/css/lightcase.css">
 		<!-- swiper css -->
-		<link rel="stylesheet" href="assets/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/css/swiper.min.css">
+        <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
 		<!-- custom scss -->
 		<link rel="stylesheet" href="assets/css/style-ltr.css">
-
 		<title>Matbokh - drone & Resturant</title>
 	</head>
 
@@ -384,8 +384,14 @@
                                                     <div id="two" class="tabcontent">
                                                        <div class="pilotAvailability">
                                                            <form>
-                                                            <h5 class="pilot-avail">Available</h5>
-                                                            <p>You are Available for drone missions</p>
+                                                           <!-- Default switch -->
+                                                            <div class="custom-control custom-switch" id='custom-switch'>
+                                                                <input type="checkbox" class="custom-control-input" id="customSwitches" checked>
+                                                                <label class="custom-control-label" id='customLabel' class="customLabel" for="customSwitches">Active</label>
+                                                            </div>
+
+                                                            <!-- <h5 class="pilot-avail">Available</h5> -->
+                                                            <p id='customAvail' class="animated"> You are Available for drone missions</p>
                                                             <h5>Location</h5>
                                                             <div class="availLocation">Ajman, Al rawdah <i class="icofont-ui-edit"></i></div>
                                                             <h5>Received Requests *</h5>
@@ -462,12 +468,19 @@
                                                                     <dd>(not completed)</dd>
                                                                 </dl>
                                                                 <div class="button-group">
+                                                                    
                                                                     <button class="drone-btn style-2">
                                                                         <span>Accept</span>
                                                                     </button>
                                                                     <button class="drone-btn style-2" data-toggle="modal" data-target="#cancelReqModal">
                                                                         <span>Reject</span>
                                                                     </button>
+                                                               
+
+                                                                <!--@@@@@@@@@ accepted and rejected buttons 
+                                                                    
+                                                                    <button class="drone-btn style-2 req-accepted" disabled> Accepted</button>
+                                                                <button class="drone-btn style-2 req-rejected" disabled> rejected</button> -->
                                                                 </div>
                                                             </div>
 
@@ -822,8 +835,9 @@
 		<!------------pilot-single------------>
 		<script src='assets/js/inline-edit.jquery.js'></script>
 		<!------------end pilot single------------->
-		<script src="assets/js/waypoints.min.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/js/isotope.pkgd.min.js"></script>
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/tab.js"></script>

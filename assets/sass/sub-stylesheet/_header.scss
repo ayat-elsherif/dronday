@@ -14,7 +14,7 @@
     .main-menu {
         width: calc(100% - 650px);
         @include breakpoint(xxl) {
-            width: calc(100% - 800px);
+            width: calc(100% - 740px);
         }
         ul {
             align-items: center;
@@ -105,11 +105,11 @@
         }
     }
     .author-option {
-        width: 500px;
-        @include breakpoint(xxl) {
-            display: block;
-            width: 400px;
-        }
+        width: 400px;
+        // @include breakpoint(xxl) {
+        //     display: block;
+        //     width: 400px;
+        // }
         .author-area {
             display: flex;
             flex-wrap: wrap;

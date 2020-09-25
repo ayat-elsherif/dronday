@@ -292,6 +292,7 @@ iframe{
     background: $primary-color;
     border-radius: 2px;
     border: transparent;
+    cursor: pointer;
     @extend %rel;
     @extend %hidden;
     @include breakpoint(md){
@@ -370,6 +371,13 @@ iframe{
             span{
                 color:#eee;
             }
+        }
+    }
+    &:disabled{
+        transition: none;
+        cursor: auto;
+        &:after{
+            background-color: transparent !important;
         }
     }
 }

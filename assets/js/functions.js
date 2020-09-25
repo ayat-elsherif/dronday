@@ -309,4 +309,24 @@
         });
         
     });
+
+
+
+    /*****************************Status switch button*************************** */
+    $('.custom-switch').on('change',function(){
+        let switchStatus='#customSwitches';
+        let switchLabel='#customLabel';
+        let customAvail='#customAvail';
+        if($(switchStatus).is(':checked')){
+            console.log('true');
+            $(switchLabel).text('Active').css('color','#009fe3');
+            $(customAvail).addClass('fadeIn').removeClass('fadeOut');
+           }
+           else{
+             console.log('false');
+             $(switchLabel).text('Deactive').css('color','inherit');
+             $(customAvail).addClass('fadeOut').removeClass('fadeIn');
+           }
+    });
+
 }(jQuery));
