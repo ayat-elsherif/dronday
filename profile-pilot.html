@@ -21,13 +21,13 @@
         <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
 		<!-- custom scss -->
 		<link rel="stylesheet" href="assets/css/style-ltr.css">
-		<title>Matbokh - drone & Resturant</title>
+		<title>dronDay - pilot homepage</title>
 	</head>
 
 	<!------switch between ltr - rtl ------>
 	<body>
 
-        <!--------------------------cancel modal--------------------------->
+        <!--------------------------modals--------------------------->
 
         <div class="modal fade" id="cancelReqModal" tabindex="-1" role="dialog" aria-labelledby="cancelReqModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -58,7 +58,45 @@
               </div>
             </div>
           </div>
-        <!------------------------------End Cancel Modal--------------------->
+
+          <div class="modal fade" id="editPilotPassword" tabindex="-1" role="dialog" aria-labelledby="editPilotPasswordLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">		
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="icofont-close-line"></i></span>
+					  </button>
+					  <div class="edit-pilot-password">
+							<form>
+								<div class="form-group">
+									<p>Change Password</p>
+									<label> Old Password*:</label>
+									<input class="form-control">
+								</div>
+								<div class="form-group">
+									<label> New Password*:</label>
+									<input class="form-control">
+								</div>
+								<div class="form-group">
+									<label> Confirm New Password*:</label>
+									<input class="form-control">
+								</div>
+								<div class="button-group mt-5">
+									<button type="button" class="drone-btn style-2 mb-2" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true"><i class="icofont-close-line"></i> Cancel</span>
+									  </button>
+									  <button type="button" class="drone-btn style-2 mb-2">
+										<span aria-hidden="true"><i class="icofont-ui-delete"></i>Change</span>
+									  </button>
+								  </div>
+							</form>
+					  </div>
+					  
+				</div>
+			  </div>
+			</div>
+		  </div>
+        <!------------------------------End Modals--------------------->
 
 		<!-- preloader -->
 		<!-- <div class="preloader"><div class="load loade"><hr/><hr/><hr/><hr/></div></div> -->
@@ -275,9 +313,9 @@
                                                     <div class="pilot-desc-middle">
                                                         <p>I love drones since many years.I love drones since many years. I love drones since many years. I love drones since many years. </p>
                                                         <ul>
-                                                            <li><span>Location</span>: Ajman, Al Rawdah</li>
-                                                            <li><span>Joined</span>: 02 December 2018</li>
-                                                            <li><span>Request</span>: 30+ Requests</li>
+                                                            <li><span>Location</span> Ajman, Al Rawdah</li>
+                                                            <li><span>Joined</span> 02 December 2018</li>
+                                                            <li><span>Request</span> 30+ Requests</li>
                                                             <li><span>Earned</span> 100 USD</li>
                                                             <li><span>Drone</span> DJI Inspire 1 Pro</li>
                                                         </ul>
@@ -341,14 +379,15 @@
                                                                     </li>
                                                                     <li>
                                                                         <div class="left">Password</div>
-                                                                        <div class="right pilotPass"><span>*********</span><i class="icofont-ui-edit"></i>
-                                                                            <output hidden></output> <!---- password real value returns here----->
+                                                                        <div class="right pilotPass" data-toggle='modal' data-target='#editPilotPassword'><span>*********</span><i class="icofont-ui-edit"></i>
                                                                         </div>
                                                                         
                                                                     </li>
                                                                     <li>
                                                                         <div class="left">Location</div>
-                                                                        <div class="right pilotLocation">Ajman, Al Rawdah <i class="icofont-ui-edit"></i>
+                                                                        <div class="right pilotLocation">
+                                                                            <span class="pilotEmirate">Ajman <i class="icofont-ui-edit"></i></span>,
+                                                                            <span class="pilotArea"> Al Rawdah <i class="icofont-ui-edit"></i></span>
                                                                         </div>
                                                                         
                                                                     </li>
@@ -751,13 +790,7 @@
                                                                             <div class="col-md-4 col-12">
                                                                                 <div class="ratings">
                                                                                     <span class="rating-title">Your Rating : </span>
-                                                                                    <div class="rating">
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                        <i class="icofont-star"></i>
-                                                                                    </div>
+                                                                                    <div class="rateMe"></div> <!------------stars rating------------->
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-12 col-12">
@@ -835,14 +868,15 @@
 		<!------------pilot-single------------>
 		<script src='assets/js/inline-edit.jquery.js'></script>
 		<!------------end pilot single------------->
-        <script src="assets/js/waypoints.min.js"></script>
-        <script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/js/popper.min.js"></script>
+        <script src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/js/isotope.pkgd.min.js"></script>
-		<script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/rater.min.js"></script><!----------for rating stars--------->
 		<script src="assets/js/tab.js"></script>
 		<script src="assets/js/lightcase.js"></script>
-		<script src="assets/js/swiper.min.js"></script>
+        <script src="assets/js/swiper.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
 		<script src="assets/js/jquery.counterup.min.js"></script>
 		<script src="assets/js/functions.js"></script>
 		<script>
@@ -871,24 +905,25 @@
 							type:'text'
 
 							});
-							$(".pilotPass").inlineEdit({
-
-							type:'pass',
-							onEdit:function (el) {
-								el.find('input').attr('type','password');
-							return el.find('input').val();
-								},
-							onChange:function (el){  
-							el.find('output').text(el.find('span').text());
-							el.find('span').text('*********');
-							}
-							});
-
-							$(".pilotLocation").inlineEdit({
-
-							type:'textarea'
-
-							});
+							
+                            $(".pilotEmirate").inlineEdit({
+								type: 'select',
+								className:'emirate',
+								data: {
+									'default': 'Ajman',
+									'opt-1': 'Sharjah',
+									'opt-2': 'Dubai'
+								}
+								});
+								$(".pilotArea").inlineEdit({
+								type: 'select',
+								className:'area',
+								data: {
+									'default': 'Al Rawdah',
+									'opt-1': 'Rais',
+								}
+								});
+						
 							$(".pilotExp").inlineEdit({
 
 							type:'text'
@@ -916,6 +951,9 @@
                             });
 
 					/**************************End Edit Profile in place***************************** */
+
+
+                    /****************************************gallery " uploading Photos and videos "***********************************/
                             let photoGallery=document.getElementsByClassName('gallery-photo');
                             let videoGallery=document.getElementsByClassName('gallery-video');
                             $(photoGallery).on('click',function(){
@@ -974,6 +1012,11 @@
                                 console.log("Your browser does not support File API");
                             }
                             }
-		</script>
+                    
+                    
+					/**************************star ratings**************************/
+					$(".rateMe").rate();
+                    /**************************star ratings**************************/
+        </script>
 	</body>
 </html>
