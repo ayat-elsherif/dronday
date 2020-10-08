@@ -74,11 +74,12 @@
                     font-size: $p-lg;
                 }
             }
+            
             form {
                 border: 5px solid $white-color;
                 margin: auto;
                 align-items: center;
-                margin: 30px 0;
+                margin: 20px 0 30px;
                 box-shadow: 0 0 10px rgba(137, 137, 137, .10);
                 @extend %flex;
                 @extend %rel;
