@@ -1,6 +1,16 @@
 (function($){
     "use strict";
 
+    /**@@@ smooth scolling @@@**/
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+    
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+    /**@@@ END smooth scolling @@@**/
+
     $(window).on('load', function() {
         $(".loade").delay(2000).fadeOut("slow");
         $(".preloader").delay(2000).fadeOut("slow");
@@ -310,6 +320,11 @@
         
     });
 
+/************************Change Area / drone not found************************* */
+    $('.changeArea').on('click',function(){
+        $('.searchAgain').focus();
+       
+    });
 
 
     /*****************************Status switch button*************************** */
