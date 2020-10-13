@@ -662,6 +662,7 @@ iframe{
                         }
                         @include breakpoint(md) {
                             top: -50px;
+                            cursor: pointer;
                         }
                         i{
                             color:$theme-color;
@@ -687,6 +688,10 @@ iframe{
                         @media screen and (max-width:575px) {
                             left: 50%;
                             top: 55px;
+                        }
+                        .photo-icon{
+                            cursor: pointer;
+                            border-radius: 50%;
                         }
                     }
                     .pilot-desc {

@@ -25,6 +25,45 @@
 </head>
 
 <body>
+	<!--------------------------modals------------------------------------>
+	<div class="modal fade" id="editClientPassword" tabindex="-1" role="dialog" aria-labelledby="editClientPasswordLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">		
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true"><i class="icofont-close-line"></i></span>
+				  </button>
+				  <div class="edit-client-password">
+						<form>
+							<div class="form-group">
+								<p>Change Password</p>
+								<label> Old Password*:</label>
+								<input class="form-control">
+							</div>
+							<div class="form-group">
+								<label> New Password*:</label>
+								<input class="form-control">
+							</div>
+							<div class="form-group">
+								<label> Confirm New Password*:</label>
+								<input class="form-control">
+							</div>
+							<div class="button-group mt-5">
+								<button type="button" class="drone-btn style-2 mb-2" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true"><i class="icofont-close-line"></i> Cancel</span>
+								  </button>
+								  <button type="button" class="drone-btn style-2 mb-2">
+									<span aria-hidden="true"><i class="icofont-ui-delete"></i>Change</span>
+								  </button>
+							  </div>
+						</form>
+				  </div>
+				  
+			</div>
+		  </div>
+		</div>
+	  </div>
+	<!-------------------------END modals--------------------------------->
 	<!-- preloader -->
 	<!-- <div class="preloader"><div class="load loade"><hr/><hr/><hr/><hr/></div></div> -->
 	<!-- preloader -->
@@ -244,9 +283,8 @@
 											</li>
 											<li>
 												<div class="left">Password</div>
-												<button class="right clientPass"><span>*********</span><i
+												<button class="right clientPass" data-toggle="modal" data-target="#editClientPassword"><span>*********</span><i
 														class="icofont-ui-edit"></i>
-													<output hidden></output><!---- password real value returns here----->
 												</button>
 
 											</li>
@@ -286,10 +324,38 @@
                                                                     <button class="drone-btn style-2 req-accepted" disabled> Confirmed</button>
                                                                  -->
 											</div>
-											<div class="col-lg-6 col-12 order-photo">
-												<img src="assets/images/pilot/author/07.jpg" />
-												<p class="text-center"><small><a href="#"><i class="icofont-exchange"></i> Change
-													this pilot</a></small></p>
+											<div class="col-lg-6 col-12 pilot-brief text-center">											
+													<div class="pilot-item">
+														<img src="assets/images/pilot/author/07.jpg" />
+														<div class="pilot-inner">										
+															<div class="pilot-content">
+																<h5><a href="#">Sanzida laila Trisha</a></h5>							
+																<div class="p-food-footer">
+																	<div class="right">
+																		<div class="rating">
+																			<i class="icofont-star"></i>
+																			<i class="icofont-star"></i>
+																			<i class="icofont-star"></i>
+																			<i class="icofont-star"></i>
+																			<i class="icofont-star"></i>
+																		</div>
+																	</div>
+																</div>		
+																<div class="pilot-footer">
+																	<div class="pilot-earn pilot-con">
+																		<h6>147 </h6>
+																		<a href="#">ratings</a>
+																	</div>
+																	<div class="pilot-menu pilot-con">
+																		<h6>96</h6>
+																		<a href="#">Request</a>
+																	</div>	
+																</div>
+															</div>
+														</div>
+													</div>
+													<p class="text-center"><small><a href="#"><i class="icofont-exchange"></i> Change
+														this pilot</a></small></p>
 											</div>
 
 										</div>
@@ -438,10 +504,38 @@
 												</dl>
 
 											</div>
-											<div class=" col-lg-6 col-12 order-photo">
-												<img src="assets/images/pilot/author/07.jpg" />
-
-											</div>
+											<div class="col-lg-6 col-12 pilot-brief text-center">											
+												<div class="pilot-item">
+													<img src="assets/images/pilot/author/07.jpg" />
+													<div class="pilot-inner">										
+														<div class="pilot-content">
+															<h5><a href="#">Sanzida laila Trisha</a></h5>							
+															<div class="p-food-footer">
+																<div class="right">
+																	<div class="rating">
+																		<i class="icofont-star"></i>
+																		<i class="icofont-star"></i>
+																		<i class="icofont-star"></i>
+																		<i class="icofont-star"></i>
+																		<i class="icofont-star"></i>
+																	</div>
+																</div>
+															</div>		
+															<div class="pilot-footer">
+																<div class="pilot-earn pilot-con">
+																	<h6>147 </h6>
+																	<a href="#">ratings</a>
+																</div>
+																<div class="pilot-menu pilot-con">
+																	<h6>96</h6>
+																	<a href="#">Request</a>
+																</div>	
+															</div>
+														</div>
+													</div>
+												</div>
+											
+										</div>
 
 										</div>
 
@@ -634,18 +728,6 @@
 
 				type:'text'
 
-				});
-				$(".clientPass").inlineEdit({
-
-				type:'password',
-				onEdit:function (el) {
-					el.find('input').attr('type','password');
-				return el.find('input').val();
-					},
-				onChange:function (el){  
-				el.find('output').text(el.find('span').text());
-				el.find('span').text('*********');
-				}
 				});
 
 		/**************************End Edit Profile in place***************************** */
