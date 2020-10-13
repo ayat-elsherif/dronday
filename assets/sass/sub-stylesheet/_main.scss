@@ -2966,7 +2966,7 @@
                         }
                         .pilot-brief{
                             @include breakpoint(lg){
-                                max-width: 180px;
+                                max-width: 250px;
                             }
                             .pilot-item{
                                 box-shadow: none;
@@ -3001,16 +3001,18 @@
                                     }
                                 }
                             }
+                            
                             img{
                                 border-radius: 5px;
                                 width:100%;
                                 margin-bottom: 20px;
                                 @include breakpoint(md) {
-                                    width: auto;
+                                    width: 50%;
                                     margin:auto;
                                 }
                             }
                             p{
+                                margin-bottom: 0;
                                 i{
                                     font-size:14px
                                 }
