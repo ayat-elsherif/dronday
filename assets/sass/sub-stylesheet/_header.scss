@@ -48,7 +48,7 @@
                         padding-#{$right}: 25px;
                     }
                     &.active, &:hover {
-                        color: $theme-color;
+                        color: #8a8a8a;
                         &::after, &::before {
                             background: $theme-color;
                         }
@@ -146,6 +146,7 @@
                     line-height: 30px;
                     font-size: 16px;
                     display: inline-block;
+                    margin-#{$left}:3px;
                 }             
                 &> ul{
                 padding: 0 !important;
@@ -156,7 +157,7 @@
             }
             .joinUs{
                 border-radius: 1px;
-                border:1px solid $title-color;
+                // border:1px solid $title-color;
                 margin-#{$left}:30px;
             }
         }
